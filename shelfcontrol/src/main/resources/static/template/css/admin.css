@@ -214,7 +214,7 @@ body {
     width: calc(100% - 400px);
     left: 330px;
     margin-top: 100px;
-    min-height: 32vh;
+    min-height: 30vh;
     background: #f5f6f9;
     border-radius: 20px;
     overflow-x: auto;
@@ -227,11 +227,11 @@ body {
     width: 0;
 }
 
-.head {
+.booklist .head {
     position: relative;
     margin-left: 10px;
-    margin-top: 5px;
-    font-size: 1.1em;
+    margin-top: 0px;
+    font-size: 0.5em;
     color: #136284;
 }
 
@@ -248,7 +248,7 @@ body {
 .cardBox .card {
     position: relative;
     width: 120px;
-    height: 160px;
+    height: 180px;
     background: #136284;
     align-items: center;
     padding: 35px;
@@ -260,24 +260,45 @@ body {
     margin-left: -34px;
     margin-top: -36px;
     width: 120px;
-    height: 160px;
+    height: 180px;
     cursor: pointer;
 }
 
-.cardBox .card button {
+.cardBox .card .styleClass {
     position: fixed;
     width: 80px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: -10px;
     background: #45C342;
+    font-size: 0.8em;
     border-radius: 10px;
-    margin-top: -120px;
+    /* margin-top: -120px; */
+    opacity: 0;
+    border: 1px;
+    margin-top: -870px;
+}
+
+.card p {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 1px;
+    opacity: 0;
+    margin-top: -1500px;
+    margin-left: -700px;
+    color: #fff;
+    font-size: 0.5em;
 }
 
 .cardBox .card #del {
     position: fixed;
     background: #EC2E15;
-    margin-top: -80px;
+    margin-top: -830px;
 }
 
 .cardBox .card:hover {
@@ -291,4 +312,74 @@ body {
     height: 220px;
     filter: blur(10px);
     transition: 0.5s;
+}
+
+.cardBox .card:hover .styleClass {
+    position: absolute;
+    opacity: 1;
+    margin-top: -170px;
+    margin-left: 15px;
+}
+
+.cardBox .card:hover #del {
+    position: absolute;
+    margin-top: -130px;
+}
+
+.cardBox .card:hover p {
+    opacity: 1;
+    margin-top: -30px;
+    margin-left: -45px;
+    font-weight: 500px;
+    font-size: 0.8em;
+    outline-color: 2px black;
+}
+
+.booklist:hover+.dataBox {
+    top: 40px;
+    transition: 2s;
+}
+
+.dataBox {
+    position: fixed;
+    width: calc(100% - 400px);
+    left: 310px;
+    margin-top: 320px;
+    min-height: 6vh;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.dataCard {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    margin-top: 5px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+
+.dataCard .datas {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.dataBox .datas .icnbx {
+    position: relative;
+    margin-left: 20px;
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.dataBox .datas .numbers {
+    position: relative;
+    margin-right: 70px;
+    font-size: 20px;
 }
