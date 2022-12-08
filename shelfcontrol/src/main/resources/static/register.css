@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 23px;
+  letter-spacing: 0.4px;
+}
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  border: solid px;
+  font-family: "Quicksand";
+}
+.logo-container {
+  margin-top: 28px;
+  margin-left: 28px;
+}
+.register-form-container {
+  width: 130vh;
+  margin: auto;
+  border: solid 2px #53bdc7;
+  border-radius: 12px;
+  color: #21303c;
+  padding: 20px;
+}
+.headings {
+    margin-top: 18px;
+  text-align: center;
+}
+#top-heading {
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+#bottom-heading {
+  font-size: 24px;
+}
+.form-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 40px;
+}
+.line {
+  height: 290px;
+  width: 2px;
+  background-color: #21303c;
+}
+.form-left-container {
+  width: 400px;
+}
+.form-right-container {
+  width: 400px;
+}
+#username,
+#password,
+#email,
+#confirmPassword {
+  width: 300px;
+  padding: 16px;
+  border: none;
+  border-bottom: solid 1px #146184;
+  font-size: 18px;
+  font-weight: 200;
+  color: #21303c;
+}
+.username-container,
+.email-container,
+.account-type-container,
+.password-container,
+.confirm-password-container,
+.terms-and-conditions-container {
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+input:focus {
+  outline: none;
+}
+.terms-and-conditions-container {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.register-button-container{
+  padding-left: 32px;
+}
+.register {
+  margin-bottom: 10px;
+  width: 350px;
+  height: 40px;
+  color: white;
+  background-color: #21303c;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.login-container {
+  display: flex;
+  margin-top: 10px;
+   padding-left: 32px;
+}
+.login-question-text {
+  padding-right: 10px;
+  font-weight: 500;
+}
+#login-link {
+  text-decoration: none;
+  color: #21303c;
+  font-weight: 600;
+}
+select {
+  margin-top: 18px;
+  appearance: none;
+  border: solid 1.5px #21303c;
+  border-radius: 0;
+  width: 200px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Quicksand";
+  padding-inline: 50px;
+}
