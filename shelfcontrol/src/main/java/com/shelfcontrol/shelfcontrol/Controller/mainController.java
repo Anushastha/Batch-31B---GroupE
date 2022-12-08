@@ -21,7 +21,10 @@ public class mainController {
     public String getRegister() {
         return "register.html";
     }
-    
+    @GetMapping({"/login","/",""})
+    public String getLogin(){
+        return "login.html";
+    }
     @GetMapping({"/resetPassword"})
     public String getForgotPassword(){
         return "resetPassword.html";
@@ -47,6 +50,16 @@ public class mainController {
             return("register.html");
         }
         
+    }
+    @GetMapping("/auth")
+    public String getLogin(HttpServletRequest request) throws SQLException{
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        dbController controller = new dbController();
+        if(controller.login(email, password)){
+            return "BookUpload.html";
+        }
+        else return "login.html";
     }
     
 }

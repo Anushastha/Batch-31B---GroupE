@@ -31,5 +31,21 @@ public class dbController{
         }
         else return 0;
     }
+    public boolean login(String email, String password) throws SQLException{
+        String passwordDb = "";
+        String query = "select password from Users where Email=?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, email);
+        ResultSet result = database.retrieve(ps);
+        while(result.next()){
+            passwordDb = result.getString("Password");
+        }
+        if(password.equals(passwordDb)){
+            return(true);
+        }
+        else{
+            return(false);
+        }
+    }
     
 }
