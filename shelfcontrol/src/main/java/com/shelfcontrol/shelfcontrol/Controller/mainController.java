@@ -57,7 +57,7 @@ public class mainController {
         String password = request.getParameter("password");
         dbController controller = new dbController();
         if(controller.login(email, password)){
-            return "BookUpload.html";
+            return "register.html";
         }
         else return "login.html";
     }
