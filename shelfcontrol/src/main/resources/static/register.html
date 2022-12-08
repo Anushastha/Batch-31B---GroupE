@@ -38,7 +38,7 @@
                     </div>
                   </div>
                   <div class="email">
-                    <div class="email-container">
+                    <div class="email-container"  id="email-container">
                       <label for="email">Email Address</label>
                       <br />
                       <input
@@ -47,6 +47,9 @@
                         id="email"
                         required
                       />
+                    </div>
+                    <div id="match-email" class="match-email">
+                      *Invalid email.
                     </div>
                   </div>
                   <div class="account-type">
@@ -77,7 +80,7 @@
                     </div>
                   </div>
                   <div class="confirm-password">
-                    <div class="confirm-password-container">
+                    <div class="confirm-password-container" id="confirm-password-container">
                       <label for="confirmPassword">Confirm Password</label>
                       <br />
                       <input
@@ -86,6 +89,9 @@
                         id="confirmPassword"
                         required
                       />
+                    </div>
+                    <div id="match-password" class="match-password">
+                      *Passwords Don't Match.
                     </div>
                   </div>
                   <div class="term-conditions">
@@ -104,7 +110,7 @@
                   </div>
                   <div class="register-button">
                     <div class="register-button-container">
-                      <button action="submit" class="register">Register</button>
+                      <button action="submit" onclick="ValidateEmail();validation()" class="register">Register</button>
                     </div>
                   </div>
                   <div class="login">
@@ -125,5 +131,31 @@
         </div>
       </div>
     </div>
+    <script>
+      var password = document.getElementById("password");
+      var confirmPassword = document.getElementById("confirmPassword");
+      var matchPassword = document.getElementById("match-password");
+      var emailContainer = document.getElementById("email-container");
+      var email = document.getElementById("email");
+      var matchEmail = document.getElementById("match-email");
+      var confirmContainer = document.getElementById("confirm-password-container");
+    
+      function validation() {
+        if (password.value != confirmPassword.value) {
+          matchPassword.style.display = "initial";
+          confirmContainer.style.marginBottom = "0px";
+          password.style.borderBottom = "solid 1px red";
+          confirmPassword.style.borderBottom = "solid 1px red";
+        }
+      }
+      function ValidateEmail(mail) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+          return true;
+        }
+        emailContainer.style.marginBottom = "0px";
+        matchEmail.style.display = "initial";
+        return false;
+      }
+    </script>
   </body>
 </html>

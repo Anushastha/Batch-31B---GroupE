@@ -23,6 +23,7 @@ body {
   border-radius: 12px;
   color: #21303c;
   padding: 20px;
+  background-color: #FBFCFF;
 }
 .headings {
     margin-top: 18px;
@@ -64,6 +65,7 @@ body {
   font-size: 18px;
   font-weight: 200;
   color: #21303c;
+  background-color: #FBFCFF;
 }
 .username-container,
 .email-container,
@@ -76,6 +78,28 @@ body {
 }
 input:focus {
   outline: none;
+}
+.confirm-password-container{
+  margin-bottom: 15px;
+}
+.account-type-container{
+margin-top: 16px;
+}
+.match-email{
+  margin: 0;
+  margin-left: 30px;
+  color: red;
+  font-size: 12px;
+  display: none;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+}
+.match-password{
+  margin-top: 0;
+  margin-left: 30px;
+  color: red;
+  font-size: 12px;
+  display: none;
 }
 .terms-and-conditions-container {
   margin-top: 20px;

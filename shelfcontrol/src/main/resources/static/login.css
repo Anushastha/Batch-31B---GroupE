@@ -74,9 +74,13 @@ label {
 #email,
 #password {
   width: 370px;
-  padding: 10px;
+  padding: 16px;
   border: none;
   border-bottom: solid 1px #146184;
+  font-size: 18px;
+  font-weight: 200;
+  color: #21303c;
+  background-color: #FBFCFF;
 }
 #forgot-text {
   width: 160px;
