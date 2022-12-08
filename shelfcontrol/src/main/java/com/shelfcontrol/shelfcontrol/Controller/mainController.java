@@ -23,7 +23,7 @@ public class mainController {
     }
     @GetMapping({"/login","/",""})
     public String getLogin(){
-        return "login.html";
+        return "/login.html";
     }
     @GetMapping({"/resetPassword"})
     public String getForgotPassword(){
@@ -44,7 +44,7 @@ public class mainController {
 
         Users users = new Users(userName, email, password, subscribed, booksRead, theme, accountType);
         if(controller.register(users) == 1){
-            return("login.html");
+            return("/login.html");
         }
         else{
             return("register.html");
