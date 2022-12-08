@@ -8,49 +8,107 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="css/admin.css">
 </head>
-<div class="container">
-    <div class="navigation">
-        <ul>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="book"></ion-icon></span>
-                    <span class="title">SHELF CONTROL</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
-                    <span class="title">Add Books</span>
-                </a>
-            </li>
-            <li class="list ">
-                <a href="#">
-                    <span class="icon"><ion-icon name="people"></ion-icon></span>
-                    <span class="title">Users</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="bookmarks"></ion-icon></span>
-                    <span class="title">Reservations</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="#">
-                    <span class="icon"><ion-icon name="log-out"></ion-icon></span>
-                    <span class="title">Logout</span>
-                </a>
-            </li>
-        </ul>
-    </div>
 
-</div>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="book"></ion-icon></span>
+                        <span class="title">SHELF CONTROL</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+                        <span class="title">Add Books</span>
+                    </a>
+                </li>
+                <li class="list ">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people"></ion-icon></span>
+                        <span class="title">Users</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="bookmarks"></ion-icon></span>
+                        <span class="title">Reservations</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="search">
+                    <label>
+            <input type="text" placeholder="Search for book title, author, publisher or user">
+            <span><ion-icon name="search"></ion-icon></span>
+        </label>
+                </div>
+                <div class="category">
 
+                    <select name="Category" placeholder="Category" id="thriller">
+                    <option>Thriller</option>
+                    <option>Fantasy</option>
+                    <option>Romance</option>
+                    <option>Horror</option>
+                    
+                </select>
+
+
+                </div>
+                <div class="notification">
+
+                    <ion-icon name="notifications"></ion-icon>
+
+                </div>
+                <div class="user">
+                    <div>
+                        <img src="images/user.jpg" alt=""></div>
+                    <a class="usrname" href="#">Anupam Pandey</a>
+                </div>
+            </div>
+        </div>
+        <div class="booklist">
+            <div class="head">
+                <span>Books</span>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <img src="images/fellow.jpg" alt="">
+                    <button class="styleClass" onclick="document.getElementById('updt').click(); return false;">Update</button>
+                    <a><span> <input type= "file" id="updt" style="display:none"></span>
+                    <span> <button id="del">Delete</button></span></a>
+
+                </div>
+                <div class="card">
+                    <img src="images/td.jpg" alt="">
+                </div>
+                <div class="card">
+                    <img src="images/lll.jpg" alt="">
+                </div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+
+            </div>
+        </div>
+</body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<body>
-
-</body>
 
 </html>
