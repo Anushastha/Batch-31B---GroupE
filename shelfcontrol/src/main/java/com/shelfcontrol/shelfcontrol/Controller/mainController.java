@@ -19,7 +19,7 @@ public class mainController {
     
     @GetMapping("/register")
     public String getRegister() {
-        return "register.html";
+        return "/register.html";
     }
     @GetMapping({"/login","/",""})
     public String getLogin(){
@@ -44,7 +44,7 @@ public class mainController {
 
         Users users = new Users(userName, email, password, subscribed, booksRead, theme, accountType);
         if(controller.register(users) == 1){
-            return("/login.html");
+            return("login.html");
         }
         else{
             return("register.html");
