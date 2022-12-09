@@ -316,3 +316,88 @@ body {
 #radio4:checked~.autoslide .auto4 {
     background: pink;
 }
+.booklist {
+    position: fixed;
+    width: calc(100% - 400px);
+    left: 330px;
+    margin-top: 50px;
+    min-height: 30vh;
+    background: #f5f6f9;
+    border-radius: 20px;
+    overflow-x: auto;
+    box-shadow: 1px 1px 10px #f5f6f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.booklist .head {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: 0.7em;
+    color: #136284;
+}
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    margin-top: -15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 60px;
+}
+
+.cardBox .card {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    background: #136284;
+    align-items: center;
+    padding: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardBox .card img {
+    position: relative;
+    margin-left: -34px;
+    margin-top: -36px;
+    width: 120px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.cardBox .card .styleClass {
+    position: fixed;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+    background: #45C342;
+    font-size: 0.8em;
+    border-radius: 10px;
+    /* margin-top: -120px; */
+    opacity: 0;
+    border: 1px;
+    margin-top: -870px;
+}
+
+.card p {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 1px;
+    opacity: 0;
+    margin-top: -1500px;
+    margin-left: -700px;
+    color: #fff;
+    font-size: 0.5em;
+}
