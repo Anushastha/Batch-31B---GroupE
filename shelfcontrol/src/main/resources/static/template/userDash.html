@@ -194,4 +194,18 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('rad' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+
+        }, 5000);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
