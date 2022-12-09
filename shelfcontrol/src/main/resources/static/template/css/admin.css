@@ -164,7 +164,7 @@ body {
 
 .category select {
     width: 150px;
-    height: 30px;
+    height: 40px;
     margin-left: -110px;
     outline: none;
     border-radius: 20px;
@@ -335,16 +335,11 @@ body {
     outline-color: 2px black;
 }
 
-.booklist:hover+.dataBox {
-    top: 40px;
-    transition: 2s;
-}
-
 .dataBox {
     position: fixed;
     width: calc(100% - 400px);
     left: 310px;
-    margin-top: 320px;
+    margin-top: 350px;
     min-height: 6vh;
     border-radius: 20px;
     transition: 0.5s;
@@ -382,4 +377,56 @@ body {
     position: relative;
     margin-right: 70px;
     font-size: 20px;
+}
+
+.brwdBooks {
+    position: fixed;
+    width: calc(100% - 400px);
+    left: 330px;
+    margin-top: 460px;
+    min-height: 36vh;
+    background: #f5f6f9;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+}
+
+.brwdBooks .bBooks {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 5px;
+    display: grid;
+    font-size: 1.1em;
+}
+
+.bHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn {
+    background: #2D8C2B;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.details .table {
+    width: 100%;
+}
+
+.brwdBooks table thead td {
+    font-weight: 600;
+    border-bottom: 1.3em;
+}
+
+.brwdBooks .bBooks table tbody tr:hover {
+    background-color: rgb(121, 121, 125);
+    cursor: pointer;
 }
