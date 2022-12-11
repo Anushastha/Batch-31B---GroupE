@@ -93,7 +93,12 @@ label {
   color: #21303c;
   background-color: #fbfcff;
 }
-
+.match-password{
+  margin-top: 0;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
 #forgot-text {
   width: 160px;
   font-size: 12px;

@@ -3,15 +3,17 @@ package com.shelfcontrol.shelfcontrol.Controller;
 import java.net.http.HttpRequest;
 import java.sql.SQLException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.web.service.annotation.GetExchange;
+import org.springframework.ui.Model;
 
+import com.shelfcontrol.shelfcontrol.Methods.Method;
 import com.shelfcontrol.shelfcontrol.Models.Users;
-
-import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
@@ -19,15 +21,15 @@ public class mainController {
     
     @GetMapping("/register")
     public String getRegister() {
-        return "/register.html";
+        return "register";
     }
     @GetMapping({"/login","/",""})
     public String getLogin(){
-        return "/login.html";
+        return "login";
     }
     @GetMapping({"/resetPassword"})
     public String getForgotPassword(){
-        return "resetPassword.html";
+        return "resetPassword";
     }
     
     @GetMapping("/registerUser")
@@ -44,22 +46,36 @@ public class mainController {
 
         Users users = new Users(userName, email, password, subscribed, booksRead, theme, accountType);
         if(controller.register(users) == 1){
-            return("login.html");
+            return("login");
         }
         else{
-            return("register.html");
+            return("register");
         }
         
     }
     @GetMapping("/auth")
-    public String getLogin(HttpServletRequest request) throws SQLException{
+    public String getLogin(HttpServletRequest request, Model model) throws SQLException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        String username = "";
+        String fChar = "";
+        String accountType ="";
         dbController controller = new dbController();
-        if(controller.login(email, password)){
-            return "register.html";
+        Method method = new Method();
+        if (controller.login(email, password)) {
+            username = controller.getUsername(email);
+            accountType = controller.getType(email);
+            fChar = method.firstCharacter(username);
+            model.addAttribute("Name", username);
+            model.addAttribute("ProfileIcon", fChar);
+            model.addAttribute("Type", accountType);
+            return "register";
         }
-        else return "login.html";
+
+        else {
+            model.addAttribute("status", false);
+            return "login";
+        }
     }
     
 }

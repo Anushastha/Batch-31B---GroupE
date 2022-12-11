@@ -47,5 +47,27 @@ public class dbController{
             return(false);
         }
     }
+    public String getUsername(String email) throws SQLException{
+        String userName = "";
+        String query = "select UserName from Users where Email=?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, email);
+        ResultSet result = database.retrieve(ps);
+        while(result.next()){
+            userName = result.getString("UserName");
+        }
+        return userName;
+    }
+    public String getType(String email) throws SQLException{
+        String accountType = "";
+        String query = "select AccountType from Users where Email=?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, email);
+        ResultSet result = database.retrieve(ps);
+        while(result.next()){
+            accountType = result.getString("AccountType");
+        }
+        return accountType;
+    }
     
 }
