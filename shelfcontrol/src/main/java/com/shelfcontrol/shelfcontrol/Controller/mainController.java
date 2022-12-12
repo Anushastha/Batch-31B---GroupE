@@ -69,7 +69,7 @@ public class mainController {
             model.addAttribute("Name", username);
             model.addAttribute("ProfileIcon", fChar);
             model.addAttribute("Type", accountType);
-            return "register";
+            return "bookupload";
         }
 
         else {

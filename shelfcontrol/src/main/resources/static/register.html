@@ -116,7 +116,6 @@
                       <div class="register-button-container">
                         <button
                           action="submit"
-                          onclick="ValidateEmail();validation()"
                           class="register"
                         >
                           Register
@@ -151,6 +150,7 @@
       var confirmContainer = document.getElementById(
         "confirm-password-container"
       );
+      let registerButton = document.getElementsById("register");
 
       function validation() {
         if (password.value != confirmPassword.value) {
@@ -160,7 +160,7 @@
           confirmPassword.style.borderBottom = "solid 1px red";
         }
       }
-      function ValidateEmail(mail) {
+      function validateEmail(mail) {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
           return true;
         }
@@ -168,6 +168,8 @@
         matchEmail.style.display = "initial";
         return false;
       }
+      registerButton.addEventListener("click", function validation() {});
+      registerButton.addEventListener("click", function validateEmail() {});
     </script>
   </body>
 </html>
