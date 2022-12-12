@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/login.css" />
   </head>
   <body>
     <div class="body-container">
@@ -13,10 +13,11 @@
         <div class="body-left-container">
           <div class="logo">
             <section class="logo-container">
-              <img src="/images/logo.png" alt="image not found" height="100" />
+              <img src="/template/images/logo.png" alt="image not found" height="100" />
             </section>
           </div>
           <div class="form">
+            <form action="/auth">
             <div class="form-container">
               <div class="headings">
                 <section id="login">Login</section>
@@ -61,6 +62,9 @@
                   </div>
                 </div>
               </div>
+              <div id="match-password" class="match-password">
+                * Incorrect E-Mail Address Or Password.
+              </div>
               <div class="logged-in-container">
                 <input type="checkbox" name="logged-In" id="loggedIn" />
                 <label id="logged-in-text" for="loggedIn"
@@ -83,6 +87,7 @@
                 </div>
               </div>
             </div>
+            </form>
           </div>
         </div>
       </div>
@@ -99,4 +104,18 @@
       </div>
     </div>
   </body>
+  
+  <script>
+    var status = '${status}';
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var matchPassword = document.getElementById("match-password");
+
+    if(status=="false"){
+      email.style.borderBottom = "solid 1px red"
+      password.style.borderBottom = "solid 1px red"
+      matchPassword.style.display = "initial"
+
+    }
+  </script>
 </html>

@@ -1,0 +1,354 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+html {
+  background-color: #eef1f6;
+  overflow: hidden;
+}
+header {
+  background-color: #ffffff;
+  margin: 0;
+}
+.logo {
+  background-color: #21303c;
+  width: 156px;
+}
+#logo {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.search {
+  display: flex;
+}
+.header-container {
+  display: flex;
+}
+.form {
+  margin-top: 10px;
+}
+#genre {
+  margin-top: 20px;
+  font-size: 20px;
+  appearance: none;
+  padding: 6px 20px;
+  width: 150px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background: url("https://cdn-icons-png.flaticon.com/512/7711/7711100.png")
+    no-repeat 115px;
+  background-size: 20px;
+  cursor: pointer;
+}
+#genre:focus {
+  outline: none;
+}
+.search-bar-input {
+  padding: 10px 20px;
+  width: 450px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat 450px;
+  background-size: 20px;
+}
+input:focus {
+  outline: none;
+}
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.bell-icon {
+  margin: 22px;
+  font-size: 25px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 5px;
+  background-color: #fafcff;
+}
+.bell-icon:hover {
+  transform: rotate(0.04turn);
+}
+@keyframes bell {
+  0% {
+    transform: rotate(-0.08turn);
+  }
+  50% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(0.08turn);
+  }
+}
+.account-container {
+  display: flex;
+  margin: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  background-color: #fafcff;
+  color: #888b8b;
+  border-bottom: solid 1px #ffffff;
+  border-radius: 8px;
+}
+.account-container:hover {
+  color: #21303ccf;
+  background-color: #fafafa;
+}
+
+#profile-icon {
+  background-color: #c9f2c8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+.profile-picture {
+  margin: 10px 10px;
+}
+.profile-info {
+  padding: 10px 10px;
+  line-height: 20px;
+  text-align: start;
+}
+.profile-name {
+  font-size: 16px;
+}
+.profile-type {
+  font-size: 12px;
+}
+.body {
+  display: flex;
+}
+.navigation-container {
+  width: 156px;
+  height: 100vh;
+  background-color: #21303c;
+  color: #fff;
+  text-align: center;
+}
+.nav-item {
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  padding-top: 10px;
+  transition-duration: 0.15s;
+  cursor: pointer;
+}
+.nav-hover:hover {
+  background-color: #53bdc7;
+}
+.line {
+  height: 1px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+#bottom {
+  margin-top: 14vh;
+}
+#logout {
+  display: flex;
+}
+#logout-text {
+  margin-top: 5px;
+}
+body {
+  height: 100%;
+  margin: 0px;
+  border: solid px;
+  font-family: "Quicksand";
+  background-color: #eef1f6;
+  overflow-y: hidden;
+}
+.body-container {
+  display: flex;
+  justify-content: space-between;
+}
+.books-container {
+  background-color: white;
+  height: 325px;
+  position: relative;
+  left: 8%;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+.books-title,
+.user-list-title {
+  font-size: 22px;
+  padding-left: 48px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  color: #136284;
+}
+.books-card-container {
+  margin: 20px;
+  margin-top: 5px;
+  display: flex;
+}
+.card-ind {
+  padding: 15px;
+  padding-top: 15px;
+  margin: auto 28px;
+  border-radius: 6px;
+  background-color: #ecf3ff;
+  box-shadow: 0 4px 7px 0 rgba(119, 119, 119, 0.1),
+    0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.card-ind:hover {
+  transform: translate(0, -1px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#book-icon {
+  border-radius: 6px;
+}
+.card-content {
+  text-align: start;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.card-author {
+  font-size: 12px;
+  font-weight: 400;
+}
+.card-rating {
+  color: #fdc101;
+  font-size: 14px;
+  font-weight: 600;
+}
+.slider {
+    width: 920px;
+    height: 350px;
+    margin-left: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.sliding {
+    width: 20%;
+    transition: 2s;
+}
+
+.sliding img {
+    width: 920px;
+    height: 350px;
+}
+
+.slide img {
+    width: 800px;
+    height: 380px;
+}
+
+.manualslide {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.m-btn {
+    border: 2px solid rgb(26, 26, 25);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.m-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.m-btn:hover {
+    background: purple;
+}
+
+#rad1:checked~.sliding {
+    margin-left: 0;
+}
+
+#rad2:checked~.sliding {
+    margin-left: -20%;
+}
+
+#rad3:checked~.sliding {
+    margin-left: -40%;
+}
+
+#rad4:checked~.sliding {
+    margin-left: -60%;
+}
+
+.autoslide {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 380px;
+    display: none;
+}
+
+.autoslide div {
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.autoslide div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.autoslide .auto1 {
+    background: pink;
+}
+
+#radio2:checked~.autoslide .auto2 {
+    background: pink;
+}
+
+#radio3:checked~.autoslide .auto3 {
+    background: pink;
+}
+
+#radio4:checked~.autoslide .auto4 {
+    background: pink;
+}
