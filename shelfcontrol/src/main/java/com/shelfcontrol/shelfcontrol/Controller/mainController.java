@@ -2,18 +2,19 @@ package com.shelfcontrol.shelfcontrol.Controller;
 
 import java.net.http.HttpRequest;
 import java.sql.SQLException;
+import java.time.Year;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
+import com.mysql.cj.jdbc.Blob;
 import com.shelfcontrol.shelfcontrol.Methods.Method;
 import com.shelfcontrol.shelfcontrol.Models.Users;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 
 
 @Controller
@@ -24,12 +25,17 @@ public class mainController {
         return "register";
     }
     @GetMapping({"/login","/",""})
-    public String getLogin(){
+    public String getLogin(Model model){
+        model.addAttribute("status", true);
         return "login";
     }
     @GetMapping({"/resetPassword"})
     public String getForgotPassword(){
         return "resetPassword";
+    }
+    @GetMapping({"/bookupload"})
+    public String getBookUpload(){
+        return "bookupload";
     }
     
     @GetMapping("/registerUser")
