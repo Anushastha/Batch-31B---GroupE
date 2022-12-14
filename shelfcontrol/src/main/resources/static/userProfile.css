@@ -188,23 +188,146 @@ input:focus {
   padding-left: 40px;
 }
 .user-page-left-container {
-  width: 350px;
-  height: 75vh;
+  width: 300px;
+  height: 72vh;
   /* border: solid 2px black; */
 }
 .divide-line {
-  height: 65vh;
-  width: 1.8px;
+  height: 66vh;
+  width: 1.5px;
   background-color: #21303c;
-  margin: 30px;
+  left: 10px;
 }
+
 .user-page-right-container {
-  width: 530px;
+  height: 60vh;
+  width: 350px;  
+  position: relative;
+  top: 35px;
+  right: 20px;
+}
+#personal-info{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+}
+.personal-container input[type=text] {
+    height: 23px;
+    width: 300px;
+    position: relative;
+    top: 10px;
+    border:solid #888b8b;
+    border-width: thin; 
+    border-radius: 6px;
+    background-color: white;
+    font-size: 16px;
+}
+
+#contact{
+  position: relative;
+  top: 35px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+}
+
+.contact-container input[type=text]{
+    height: 23px;
+    width: 300px;
+    position: relative;
+    top: 10px;
+    border:solid #888b8b;
+    border-width: thin; 
+    border-radius: 6px;
+    background-color: white;
+    font-size: 16px;
+}
+#password{
+  position: relative;
+  top: 70px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+}
+.passwordOne input[type=password]{
+    height: 23px;
+    width: 300px;
+    position: relative;
+    top: 10px;
+    border:solid #888b8b;
+    border-width: thin; 
+    border-radius: 6px;
+    background-color: white;
+    font-size: 16px;
+}
+.passwordTwo input[type=password]{
+  height: 23px;
+  width: 300px;
+  position: relative;
+  top: 35px;
+  border:solid #888b8b;
+  border-width: thin; 
+  border-radius: 6px;
+  background-color: white;
+  font-size: 16px;
+}
+#change-btn{
+  position: relative;
+  top: 130px;
+  left: 205px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  width: 100px;
+  height: 35px;
+  color: white;
+  background-color: #21303c;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
 }
 #profile-name-icon {
   text-align: center;
   padding-top: 45px;
 }
+#Theme {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+  padding-top: 45px;
+  padding-left: 105px;
+}
+.theme-selector{
+  padding: 10px;
+}
+.theme{
+  font-size: 20px;
+  appearance: none;
+  padding: 5px 20px;
+  width: 150px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background-size: 20px;
+  cursor: pointer;
+}
+
 .profile-container {
   background-color: #c9f2c8;
   width: 130px;
