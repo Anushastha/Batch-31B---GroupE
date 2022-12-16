@@ -29,17 +29,17 @@
               </div>
               <div class="Genre-container">
                 <select name="genre" id="genre">
-                  <option value="adventure">Adventure</option>
-                  <option value="classics">Classics</option>
-                  <option value="fantasy">Fantasy</option>
-                  <option value="horror">Horror</option>
-                  <option value="poetry">Poetry</option>
-                  <option value="thriller">Thriller</option>
-                  <option value="sciFic">Science Fiction</option>
-                  <option value="selfHelp">Self Help</option>
-                  <option value="essays">Essays</option>
-                  <option value="nonFiction">Non Fiction</option>
-                  <option value="other">Others</option>
+                    <option value="adventure">Adventure</option>
+                            <option value="classics">Classics</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="horror">Horror</option>
+                            <option value="poetry">Poetry</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="sciFic">Science Fiction</option>
+                            <option value="selfHelp">Self Help</option>
+                            <option value="essays">Essays</option>
+                            <option value="nonFiction">Non Fiction</option>
+                            <option value="other">Others</option>
                 </select>
               </div>
             </div>
@@ -135,7 +135,7 @@
                 <div class="heading-text">Upload Book Form</div>
               </div>
             </div>
-            <form action="/show">
+            <form action="/upload" method="post" enctype="multipart/form-data">
               <div class="top-form">
                 <div class="top-form-left">
                   <div class="top-form-left-container">
@@ -171,16 +171,16 @@
                         <br />
                         <select name="category" id="category">
                           <option value="adventure">Adventure</option>
-                          <option value="classics">Classics</option>
-                          <option value="fantasy">Fantasy</option>
-                          <option value="horror">Horror</option>
-                          <option value="poetry">Poetry</option>
-                          <option value="thriller">Thriller</option>
-                          <option value="sciFic">Science Fiction</option>
-                          <option value="selfHelp">Self Help</option>
-                          <option value="essays">Essays</option>
-                          <option value="nonFiction">Non Fiction</option>
-                          <option value="other">Others</option>
+                                  <option value="classics">Classics</option>
+                                  <option value="fantasy">Fantasy</option>
+                                  <option value="horror">Horror</option>
+                                  <option value="poetry">Poetry</option>
+                                  <option value="thriller">Thriller</option>
+                                  <option value="sciFic">Science Fiction</option>
+                                  <option value="selfHelp">Self Help</option>
+                                  <option value="essays">Essays</option>
+                                  <option value="nonFiction">Non Fiction</option>
+                                  <option value="other">Others</option>
                         </select>
                       </div>
                     </div>
@@ -223,7 +223,8 @@
                     <div class="preview">
                       <div class="preview-container">
                         <div class="preview-text">Upload Preview</div>
-                        <button class="upload-preview">select</button>
+                        <input type="file" name = "preview" id="upload-preview" hidden accept="application/pdf"/>
+                        <label id = "select" for="upload-preview">Choose file</label>
                       </div>
                     </div>
                     <div class="icon">
@@ -249,9 +250,10 @@
               </div>
               <div class="upload-button">
                 <div class="upload-button-container">
-                  <button id="upload-button">Upload</button>
+                  <button type="submit" id = "upload-button">Upload</button>
                 </div>
               </div>
+              
             </form>
           </div>
         </div>

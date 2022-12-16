@@ -1,21 +1,25 @@
 package com.shelfcontrol.shelfcontrol.Controller;
 
-import java.net.http.HttpRequest;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.time.Year;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
-import com.mysql.cj.jdbc.Blob;
 import com.shelfcontrol.shelfcontrol.Methods.Method;
+import com.shelfcontrol.shelfcontrol.Methods.storeImage;
+import com.shelfcontrol.shelfcontrol.Models.Books;
 import com.shelfcontrol.shelfcontrol.Models.Users;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class mainController {
@@ -83,5 +87,37 @@ public class mainController {
             return "login";
         }
     }
-    
+    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String uploadBook(HttpServletRequest request, @RequestPart(name = "thumbnail") MultipartFile thumbnail,  @RequestPart(name = "preview") MultipartFile preview,
+            Model model) throws IOException, ServletException {
+        dbController controller = new dbController();
+        int isbn = Integer.parseInt(request.getParameter("isbn"));
+        String bookName = request.getParameter("book");
+        String authorName = request.getParameter("author");
+        String category = request.getParameter("category");
+        int noOfCopies = Integer.parseInt(request.getParameter("copies"));
+        String publisherName = request.getParameter("publisher");
+        Year publishedYear = Year.parse(request.getParameter("published-year"));
+        String synopsis = request.getParameter("bookSynopsis");
+        storeImage store = new storeImage();
+        int status = store.store(thumbnail, preview, request.getParameter("isbn"));
+        if (status == 1) {
+            String retFile = "/images/books/" + request.getParameter("isbn") + ".png";
+            model.addAttribute("image", retFile);
+            Books books = new Books(isbn, bookName, authorName, category, noOfCopies, publisherName, publishedYear,
+                    synopsis);
+            try {
+                if (controller.addBooks(books) == 1) {
+                    return ("register");
+                } else {
+                    return ("bookupload");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return ("register");
+        } else {
+            return ("bookupload");
+        }
+    } 
 }

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import org.apache.catalina.User;
 
 import com.shelfcontrol.shelfcontrol.Database.db;
+import com.shelfcontrol.shelfcontrol.Models.Books;
 import com.shelfcontrol.shelfcontrol.Models.Users;
 
 public class dbController{
@@ -69,5 +70,22 @@ public class dbController{
         }
         return accountType;
     }
-    
+    public int addBooks(Books books) throws SQLException{
+        try{
+            String query = "insert into Books(ISBN,BookName,AuthorName,Category,NoOfCopies,PublisherName,PublishedYear,Synopsis) values (?,?,?,?,?,?,?,?)";
+            ps = database.connection.prepareStatement(query);
+            ps.setInt(1, books.getIsbn());
+            ps.setString(2, books.getBookName());
+            ps.setString(3, books.getAuthorName());
+            ps.setString(4, books.getCategory());
+            ps.setInt(5, books.getCopies());
+            ps.setString(6, books.getPublisherName());
+            ps.setInt(7, books.getPublishedYear().getValue());
+            ps.setString(8, books.getSynopsis());
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return database.manipulate(ps);
+    } 
 }
