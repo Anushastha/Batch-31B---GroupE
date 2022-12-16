@@ -183,20 +183,19 @@ input:focus {
   border: solid 1px #eef1f6;
   border-radius: 12px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 30px;
   padding-left: 40px;
 }
 .user-page-left-container {
-  width: 300px;
+  width: 150px;
   height: 72vh;
-  /* border: solid 2px black; */
 }
 .divide-line {
   height: 66vh;
   width: 1.5px;
   background-color: #21303c;
-  left: 10px;
+  left: 2px;
 }
 
 .user-page-right-container {
@@ -204,7 +203,7 @@ input:focus {
   width: 350px;  
   position: relative;
   top: 35px;
-  right: 20px;
+  right: 100px;
 }
 #personal-info{
   font-family: 'Quicksand';
@@ -216,7 +215,7 @@ input:focus {
 }
 .personal-container input[type=text] {
     height: 23px;
-    width: 300px;
+    width: 350px;
     position: relative;
     top: 10px;
     border:solid #888b8b;
@@ -225,10 +224,20 @@ input:focus {
     background-color: white;
     font-size: 16px;
 }
+#name{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-size: small;
+  position: relative;
+  text-align: right;
+  bottom: 15px;
+  right: 8px;
+  z-index: 10;
+}
 
 #contact{
   position: relative;
-  top: 35px;
+  top: 20px;
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 500;
@@ -236,10 +245,20 @@ input:focus {
   line-height: 22px;
   color: #888b8b;
 }
+#email{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-size: small;
+  position: relative;
+  text-align: right;
+  bottom: 15px;
+  right: 8px;
+  z-index: 10;
+}
 
 .contact-container input[type=text]{
     height: 23px;
-    width: 300px;
+    width: 350px;
     position: relative;
     top: 10px;
     border:solid #888b8b;
@@ -250,7 +269,7 @@ input:focus {
 }
 #password{
   position: relative;
-  top: 70px;
+  top: 40px;
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 500;
@@ -260,7 +279,7 @@ input:focus {
 }
 .passwordOne input[type=password]{
     height: 23px;
-    width: 300px;
+    width: 350px;
     position: relative;
     top: 10px;
     border:solid #888b8b;
@@ -271,19 +290,30 @@ input:focus {
 }
 .passwordTwo input[type=password]{
   height: 23px;
-  width: 300px;
+  width: 350px;
   position: relative;
-  top: 35px;
+  top: 10px;
   border:solid #888b8b;
   border-width: thin; 
   border-radius: 6px;
   background-color: white;
   font-size: 16px;
 }
+#old-pass,#new-pass{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-size: small;
+  position: relative;
+  text-align: right;
+  bottom: 15px;
+  right: 10px;
+  z-index: 10;
+}
+
 #change-btn{
   position: relative;
-  top: 130px;
-  left: 205px;
+  top: 100px;
+  left: 255px;
   margin-bottom: 10px;
   border-radius: 6px;
   width: 100px;
@@ -306,11 +336,14 @@ input:focus {
   line-height: 22px;
   color: #888b8b;
   padding-top: 45px;
-  padding-left: 105px;
+  padding-left: 135px;
 }
 .theme-selector{
-  padding: 10px;
+position: relative;
+top: 20px;
+right: 20px;
 }
+
 .theme{
   font-size: 20px;
   appearance: none;
@@ -321,7 +354,7 @@ input:focus {
   color: #888b8b;
   border: solid 1px #cbcdcd;
   border-radius: 4px;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: 20px;
   margin-top: 15px;
   background-size: 20px;
