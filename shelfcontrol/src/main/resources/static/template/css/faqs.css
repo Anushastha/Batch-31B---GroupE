@@ -109,3 +109,62 @@ p {
     cursor: pointer;
     color: rgb(255, 255, 255);
 }
+
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+#p4 {
+    z-index: 1;
+}
+
+#c1:checked~.flip-book #p1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#c2:checked~.flip-book #p2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+#c3:checked~.flip-book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+#cover h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 160px;
+}
+
+.front h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 160px;
+    color: #000000;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    font-size: 1.7em;
+    color: #ffffff;
+    font-weight: 1000;
+    text-shadow: 0 0 5px black;
+}
