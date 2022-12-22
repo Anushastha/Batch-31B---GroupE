@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="/css/resetPassword.css">
+    <link rel="stylesheet" href="/template/resetPassword.css">
   </head>
   <body>
     <div class="forgot-password">
       <div class="forgot-password-container">
         <div class="logo">
           <div class="logo-container">
-            <img src="/images/logo.png" alt="logo" height="100" />
+            <img src="/template/images/logo.png" alt="logo" height="100" />
           </div>
         </div>
         <div class="reset-password-form">
