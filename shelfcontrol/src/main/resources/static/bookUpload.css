@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+html {
+  background-color: #eef1f6;
+  overflow: hidden;
+}
+header {
+  background-color: #ffffff;
+  margin: 0;
+}
+.logo {
+  background-color: #21303c;
+  width: 156px;
+}
+#logo {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.search {
+  display: flex;
+}
+.header-container {
+  display: flex;
+}
+.form {
+  margin-top: 10px;
+}
+#genre {
+  margin-top: 20px;
+  font-size: 20px;
+  appearance: none;
+  padding: 6px 20px;
+  width: 150px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background: url("/images/icons/down-arrow.png")
+    no-repeat 115px;
+  background-size: 20px;
+  cursor: pointer;
+}
+#genre:focus {
+  outline: none;
+}
+.search-bar-input {
+  padding: 10px 20px;
+  width: 450px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat 450px;
+  background-size: 20px;
+}
+input:focus {
+  outline: none;
+}
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.bell-icon {
+  margin: 22px;
+  font-size: 25px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 5px;
+  background-color: #fafcff;
+}
+.bell-icon:hover {
+  transform: rotate(0.04turn);
+}
+@keyframes bell {
+  0% {
+    transform: rotate(-0.08turn);
+  }
+  50% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(0.08turn);
+  }
+}
+.account-container {
+  display: flex;
+  margin: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  background-color: #fafcff;
+  color: #888b8b;
+  border-bottom: solid 1px #ffffff;
+  border-radius: 8px;
+}
+.account-container:hover {
+  color: #21303ccf;
+  background-color: #fafafa;
+}
+
+#profile-icon {
+  background-color: #c9f2c8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+.profile-picture {
+  margin: 10px 10px;
+}
+.profile-info {
+  padding: 10px 10px;
+  line-height: 20px;
+  text-align: start;
+}
+.profile-name {
+  font-size: 18px;
+}
+.profile-type {
+  font-size: 16px;
+}
+body {
+  height: 100%;
+  margin: 0px;
+  border: solid px;
+  font-family: "Quicksand";
+  background-color: #eef1f6;
+  overflow-y: hidden;
+}
+.body-container {
+  display: flex;
+  justify-content: space-between;
+}
+.body {
+  display: flex;
+}
+.navigation-container {
+  width: 156px;
+  height: 100vh;
+  background-color: #21303c;
+  color: #fff;
+  text-align: center;
+}
+.nav-item {
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  padding-top: 20px;
+  transition-duration: 0.15s;
+  cursor: pointer;
+}
+.nav-hover:hover {
+  background-color: #53BDC7;
+}
+.line {
+  height: 1px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+#bottom {
+  margin-top: 42vh;
+}
+#logout {
+  display: flex;
+}
+#logout-text {
+  margin-top: 5px;
+}
+.book-upload{
+  height: 600px;
+}
+.book-upload-container{
+  width: 130vh;
+  margin: auto;
+  background-color: #fff;
+  border: solid 1px #eefbfc;
+  border-radius: 12px;
+  color: #21303c;
+  padding: 20px;
+  margin: 30px 80px;
+  height: 600px;
+  overflow-y: scroll;
+}
+.heading-container {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 30px;
+}
+.top-form {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 40px;
+}
+.form-line {
+  height: 400px;
+  width: 2px;
+  background-color: #146184;
+}
+.top-form-left-container {
+  width: 400px;
+}
+.top-form-right-container {
+  width: 400px;
+}
+#isbn,
+#bookName,
+#authorName,
+#category,
+#noOfCopies,
+#publisherName {
+  width: 300px;
+  padding: 14px;
+  border: none;
+  border-bottom: solid 1px #146184;
+  font-size: 18px;
+  font-weight: 200;
+  color: #21303c;
+}
+.isbn-container,
+.book-name-container,
+.author-name-container,
+.category-container,
+.no-of-copies-container,
+.publisher-name-container,
+.published-year-container,
+.preview-container,
+.icon-container,
+.book-synopsis-container {
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+#publishedYear{
+  width:120px;
+  font-size: 16px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+}
+input:focus{
+  outline: none;
+}
+#select{
+  background-color: #21303c;
+  color: #eefbfc;
+  padding: 4px 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#synopsis{
+  height: 200px;
+  width: 800px;
+  padding: 20px;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  margin-top: 10px;
+}
+#category {
+  margin-top: 20px;
+  font-size: 20px;
+  appearance: none;
+  padding: 6px 20px;
+  width: 300px;
+  height: 40px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #146184;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background: url("/images/icons/down-arrow.png") no-repeat 260px;
+  background-size: 25px;
+  cursor: pointer;
+}
+#category:focus {
+  outline: none;
+}
+
+.published-year-container,
+.preview-container,
+.icon-container {
+  display: flex;
+  margin: 45px auto;
+  justify-content: space-between;
+  margin-right: 40px;
+}
+.upload-preview,
+.upload-icon {
+  border: none;
+  width: 120px;
+  height: 26px;
+  background-color: #21303c;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  align-items: center;
+}
+.form-bottom-container{
+  margin-left: 42px;
+}
+.upload-button-container{
+  text-align: center;
+}
+#upload-button{
+  margin-bottom: 10px;
+  width: 350px;
+  height: 40px;
+  color: white;
+  background-color: #21303c;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
