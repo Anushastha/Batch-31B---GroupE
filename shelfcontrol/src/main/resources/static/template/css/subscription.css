@@ -357,7 +357,7 @@ body {
   height: 35px;
   background-color: green; 
  } 
-/* .buy-now{
+.buy-now{
         position: fixed;
         text-align: center;
         width: 139px;
@@ -369,7 +369,7 @@ body {
         font-family: var(--font-ponnala);
         color: green;
         display: inline-block;
-      } */
+      }
 
 
 .premium {
