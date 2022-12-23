@@ -15,36 +15,31 @@
             <img id="logo" src="/template/images/logo2.png" alt="logo" height="60px" />
           </div>
         </div>
-        <div class="form">
-          <div class="form-container">
-            <div class="search">
-              <div class="search-bar-container">
-                <input
-                  class="search-bar-input"
-                  type="text"
-                  name="bookName"
-                  id="book"
-                  placeholder="Search for book title, author, publisher or users"
-                />
-              </div>
-              <div class="Genre-container">
-                <select name="genre" id="genre">
-                    <option value="adventure">Adventure</option>
-                            <option value="classics">Classics</option>
-                            <option value="fantasy">Fantasy</option>
-                            <option value="horror">Horror</option>
-                            <option value="poetry">Poetry</option>
-                            <option value="thriller">Thriller</option>
-                            <option value="sciFic">Science Fiction</option>
-                            <option value="selfHelp">Self Help</option>
-                            <option value="essays">Essays</option>
-                            <option value="nonFiction">Non Fiction</option>
-                            <option value="other">Others</option>
-                </select>
+        <form action="/SearchBooks" method="get">
+          <div class="form">
+            <div class="form-container">
+              <div class="search">
+                <div class="search-bar-container">
+                  <input
+                    class="search-bar-input"
+                    type="text"
+                    name="bookName"
+                    id="book"
+                    placeholder="Search for book title, author, publisher or users"
+                  />
+                </div>
+                <div class="Genre-container">
+                  <select name="genre" id="genre">
+                    <option value="horror">Horror</option>
+                    <option value="classic">Classic</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="thriller">Thriller</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
         <div class="nav-right">
           <div class="notifications">
             <div class="bell-icon" id="bell-icon">

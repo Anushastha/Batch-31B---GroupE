@@ -3,8 +3,10 @@ package com.shelfcontrol.shelfcontrol.Controller;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.Year;
+import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.MediaType;
@@ -15,6 +17,7 @@ import com.shelfcontrol.shelfcontrol.Methods.Method;
 import com.shelfcontrol.shelfcontrol.Methods.storeImage;
 import com.shelfcontrol.shelfcontrol.Models.Books;
 import com.shelfcontrol.shelfcontrol.Models.Users;
+import com.shelfcontrol.shelfcontrol.Models.search;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -119,5 +122,23 @@ public class mainController {
         } else {
             return ("bookupload");
         }
-    } 
+    }
+    @GetMapping("/SearchBooks")
+    public String searchBooks(HttpServletRequest request, ServletResponse response, Model model) throws SQLException, ServletException, IOException{
+        dbController controller = new dbController();
+        String search = request.getParameter("bookName");
+        List <search> result = controller.bookData(search);
+        if(result != null){
+            model.addAttribute("status", 1);
+        }
+        else{
+            model.addAttribute("status", 0);
+
+        }
+        model.addAttribute("search", search);
+        model.addAttribute("result", result);
+        request.setAttribute("result", result);
+        return("bookSearch");
+
+    }
 }

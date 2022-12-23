@@ -3,12 +3,15 @@ package com.shelfcontrol.shelfcontrol.Controller;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.catalina.User;
 
 import com.shelfcontrol.shelfcontrol.Database.db;
 import com.shelfcontrol.shelfcontrol.Models.Books;
 import com.shelfcontrol.shelfcontrol.Models.Users;
+import com.shelfcontrol.shelfcontrol.Models.search;
 
 public class dbController{
     db database = new db();
@@ -87,5 +90,32 @@ public class dbController{
             e.printStackTrace();
         }
         return database.manipulate(ps);
-    } 
+    }
+    public List <search> bookData(String search){
+        ResultSet resultSet = null;
+        List <search> result = new ArrayList<>();
+        try{
+            String query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, search);
+            ps.setString(2, search);
+            ps.setString(3, search);
+            resultSet = database.retrieve(ps);   
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        try {
+            while (resultSet.next()){
+                search s = new search();
+                s.setAuthorName(resultSet.getString("AuthorName"));
+                s.setBookName(resultSet.getString("BookName"));
+                s.setCategory(resultSet.getString("Category"));
+                s.setIsbn(resultSet.getInt("ISBN"));
+                result.add(s);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

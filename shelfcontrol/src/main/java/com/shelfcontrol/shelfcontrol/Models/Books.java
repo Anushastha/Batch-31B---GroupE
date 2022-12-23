@@ -1,7 +1,6 @@
 package com.shelfcontrol.shelfcontrol.Models;
 
 import java.time.Year;
-import com.mysql.cj.jdbc.Blob;
 
 public class Books {
     private int isbn;
