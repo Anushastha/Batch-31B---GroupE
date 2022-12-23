@@ -8,7 +8,7 @@
 
 body{
     min-height: 100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("/images/contact.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("images/contact.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
