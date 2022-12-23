@@ -136,7 +136,7 @@
                       <div class="isbn-container">
                         <label for="isbn">ISBN</label>
                         <br />
-                        <input type="text" name="isbn" id="isbn" placeholder= "${isbn}" disabled />
+                        <input type="text" name="isbn" id="isbn" placeholder= "${isbn}" value = "${isbn}" />
                       </div>
                     </div>
                     <div class="book-name">
