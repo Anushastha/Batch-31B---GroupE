@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Roboto", sans-serif;
+    font-family: "";
     background: linear-gradient(90deg, rgb(251, 247, 247) 50%, #585656 50%);
 }
 
@@ -69,7 +69,7 @@ p {
 
 .front h2,
 p {
-    color: #000000;
+    color: #21303C;
 }
 
 .back h2 {
@@ -91,7 +91,7 @@ p {
     z-index: 99;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    background: rgb(0, 0, 0);
+    background: #21303C;
 }
 
 .next-btn {
@@ -155,12 +155,12 @@ p {
     align-items: center;
     text-align: center;
     margin-top: 160px;
-    color: #000000;
+    color:#21303C;
 }
 
 .title {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 42%;
     transform: translate(-50%, -50%);
     font-size: 1.7em;
