@@ -144,7 +144,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                     <div class="book-img">
                       <img
                         id="book-icon"
-                        src="<c:out"
+                        src="c:out"
                         value="/images/books/${res.isbn}.png"
                         height="150px"
                         alt="book image"

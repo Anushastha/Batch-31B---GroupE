@@ -101,10 +101,6 @@ public class dbController{
             ps.setString(2, search);
             ps.setString(3, search);
             resultSet = database.retrieve(ps);   
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-        try {
             while (resultSet.next()){
                 search s = new search();
                 s.setAuthorName(resultSet.getString("AuthorName"));

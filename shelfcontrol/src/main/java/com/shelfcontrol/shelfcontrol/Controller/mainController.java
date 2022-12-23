@@ -128,11 +128,11 @@ public class mainController {
         dbController controller = new dbController();
         String search = request.getParameter("bookName");
         List <search> result = controller.bookData(search);
-        if(result != null){
-            model.addAttribute("status", 1);
+        if(result.isEmpty()){
+            model.addAttribute("status", 0);
         }
         else{
-            model.addAttribute("status", 0);
+            model.addAttribute("status", 1);
 
         }
         model.addAttribute("search", search);
