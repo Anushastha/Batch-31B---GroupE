@@ -15,7 +15,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       <div class="header-container">
         <div class="logo">
           <div class="logo-container">
-            <img id="logo" src="/images/logo2.png" alt="logo" height="60px" />
+            <img id="logo" src="/template/images/logo2.png" alt="logo" height="60px" />
           </div>
         </div>
         <div class="form">
@@ -44,7 +44,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         <div class="nav-right">
           <div class="notifications">
             <div class="bell-icon" id="bell-icon">
-              <img src="/images/icons/bell.png" alt="" height="30px" />
+              <img src="/template/images/icons/bell.png" alt="" height="30px" />
             </div>
           </div>
           <div class="account">
@@ -74,7 +74,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/images/icons/addBooks.png"
+                    src="/template/images/icons/addBooks.png"
                     alt="add books"
                     height="30px"
                   />
@@ -87,7 +87,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/images/icons/users.png"
+                    src="/template/images/icons/users.png"
                     alt="users"
                     height="30px"
                   />
@@ -100,7 +100,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/images/icons/reservations.png"
+                    src="/template/images/icons/reservations.png"
                     alt="reservation"
                     height="30px"
                   />
@@ -114,7 +114,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <div id="logout" class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/images/icons/logout.png"
+                    src="/template/images/icons/logout.png"
                     alt="logout"
                     height="30px"
                   />
@@ -144,12 +144,11 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                     <div class="book-img">
                       <img
                         id="book-icon"
-                        src="c:out"
+                        src= <c:out value="/images/books/${res.isbn}.png"/>
                         value="/images/books/${res.isbn}.png"
                         height="150px"
                         alt="book image"
                       />
-                      alt="" height="150px" />
                     </div>
 
                     <div class="card-content">
@@ -167,6 +166,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                     <div class="buttons-container">
                       <form action="/updatePage">
                         <div class="update-button">
+                          <input name = "isbn" hidden value= <c:out value="${res.isbn}" />>
                           <button class="update-button-container">
                             Update
                           </button>

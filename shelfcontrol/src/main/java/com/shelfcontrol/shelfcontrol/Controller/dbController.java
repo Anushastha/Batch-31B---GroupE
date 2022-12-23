@@ -114,4 +114,28 @@ public class dbController{
         }
         return result;
     }
+    public int updateBooks(Books books) throws SQLException{
+        try{
+            String query = "update Books set BookName = ?, AuthorName = ?, Category = ?, NoOfCopies = ?, PublisherName = ?, PublishedYear = ?, Synopsis = ? where ISBN = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, books.getBookName());
+            ps.setString(2, books.getAuthorName());
+            ps.setString(3, books.getCategory());
+            ps.setInt(4, books.getCopies());
+            ps.setString(5, books.getPublisherName());
+            ps.setInt(6, books.getPublishedYear().getValue());
+            ps.setString(7, books.getSynopsis());
+            ps.setInt(8, books.getIsbn());
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return database.manipulate(ps);
+    }
+    public int deleteBook(String isbn) throws SQLException{
+        String query = "delete from Books where ISBN = ?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, isbn);
+        return database.manipulate(ps);
+    }
 }

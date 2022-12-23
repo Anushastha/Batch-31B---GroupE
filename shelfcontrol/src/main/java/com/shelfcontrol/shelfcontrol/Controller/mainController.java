@@ -141,4 +141,33 @@ public class mainController {
         return("bookSearch");
 
     }
+    @GetMapping("/updatePage")
+    public String getUpdatePage(HttpServletRequest request, Model model){
+        String isbn = request.getParameter("isbn");
+        model.addAttribute("isbn", isbn);
+        model.addAttribute("status", 2);
+        return("bookupdate");
+    }
+    @GetMapping("/update")
+    public String update(HttpServletRequest request, Model model) throws SQLException{
+        int isbn = Integer.parseInt(request.getParameter("isbn"));
+        String bookName = request.getParameter("book");
+        String authorName = request.getParameter("author");
+        String category = request.getParameter("category");
+        int noOfCopies = Integer.parseInt(request.getParameter("copies"));
+        String publisherName = request.getParameter("publisher");
+        Year publishedYear = Year.parse(request.getParameter("published-year"));
+        String synopsis = request.getParameter("bookSynopsis");
+        dbController controller = new dbController();
+        Books books = new Books(isbn, bookName, authorName, category, noOfCopies, publisherName, publishedYear, synopsis);
+        if(controller.updateBooks(books) == 1){
+            model.addAttribute("status", 1);
+        }
+        else{
+            model.addAttribute("status", 0);
+        }
+        model.addAttribute("isbn", isbn);
+        return("bookupdate");
+    }
+    
 }
