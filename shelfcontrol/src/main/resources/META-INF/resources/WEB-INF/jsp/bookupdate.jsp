@@ -12,7 +12,7 @@
       <div class="header-container">
         <div class="logo">
           <div class="logo-container">
-            <img id="logo" src="/template/images/logo2.png" alt="logo" height="60px" />
+            <img id="logo" src="/images/logo2.png" alt="logo" height="60px" />
           </div>
         </div>
         <div class="form">
@@ -41,7 +41,7 @@
         <div class="nav-right">
           <div class="notifications">
             <div class="bell-icon" id="bell-icon">
-              <img src="/template/images/icons/bell.png" alt="" height="30px" />
+              <img src="/images/icons/bell.png" alt="" height="30px" />
             </div>
           </div>
           <div class="account">
@@ -71,7 +71,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/template/images/icons/addBooks.png"
+                    src="/images/icons/addBooks.png"
                     alt="add books"
                     height="30px"
                   />
@@ -84,7 +84,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/template/images/icons/users.png"
+                    src="/images/icons/users.png"
                     alt="users"
                     height="30px"
                   />
@@ -97,7 +97,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="/template/images/icons/reservations.png"
+                    src="/images/icons/reservations.png"
                     alt="reservation"
                     height="30px"
                   />
@@ -110,7 +110,7 @@
             <div id="logout" class="nav-item">
               <div class="nav-icon">
                 <img
-                  src="/templateimages/icons/logout.png"
+                  src="/images/icons/logout.png"
                   alt="logout"
                   height="30px"
                 />
@@ -136,14 +136,14 @@
                       <div class="isbn-container">
                         <label for="isbn">ISBN</label>
                         <br />
-                        <input type="text" name="isbn" id="isbn" placeholder= "${isbn}" value = "${isbn}" />
+                        <input type="text" name="isbn" id="isbn" placeholder= "${isbn}" value = "${isbn}" readonly />
                       </div>
                     </div>
                     <div class="book-name">
                       <div class="book-name-container">
                         <label for="bookName">Book Name</label>
                         <br />
-                        <input type="text" name="book" id="bookName" required />
+                        <input type="text" name="book" id="bookName" placeholder = "${bookName}" value = "${bookName}" required />
                       </div>
                     </div>
                     <div class="author-name">
@@ -154,6 +154,8 @@
                           type="text"
                           name="author"
                           id="authorName"
+                          value="${authorName}"
+                          placeholder="${authorName}"
                           required
                         />
                       </div>
@@ -181,6 +183,8 @@
                           type="text"
                           name="copies"
                           id="noOfCopies"
+                          value="${NoOfCopies}"
+                          placeholder="${NoOfCopies}"
                           required
                         />
                       </div>
@@ -193,6 +197,8 @@
                           type="text"
                           name="publisher"
                           id="publisherName"
+                          value="${publisherName}"
+                          placeholder="${publisherName}"
                           required
                         />
                       </div>
@@ -201,7 +207,7 @@
                       <div class="published-year-container">
                         <label for="publishedYear">Published Year</label>
                         <br />
-                        <input id = "publishedYear" name = "published-year" type="number" min="1900" max="2022" step="1" value="2016" />
+                        <input id = "publishedYear" name = "published-year" type="number" min="1900" max="2022" step="1" value="${publishedYear}" />
                       </div>
                     </div>
                   </div>
@@ -213,7 +219,7 @@
                     <div class="book-synopsis-container">
                       <label class="synopsis-text" for="synopsis">Synopsis</label>
                       <br />
-                      <textarea type="text" name="bookSynopsis" id="synopsis" required></textarea>
+                      <textarea type="text" name="bookSynopsis" id="synopsis" placeholder="${synopsis}" required></textarea>
                     </div>
                   </div>
                 </div>

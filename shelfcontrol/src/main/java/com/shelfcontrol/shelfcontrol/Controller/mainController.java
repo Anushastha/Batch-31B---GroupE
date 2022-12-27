@@ -1,6 +1,7 @@
 package com.shelfcontrol.shelfcontrol.Controller;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Year;
 import java.util.List;
@@ -144,9 +145,23 @@ public class mainController {
     @GetMapping("/updatePage")
     public String getUpdatePage(HttpServletRequest request, Model model){
         String isbn = request.getParameter("isbn");
+        dbController controller = new dbController();
+        ResultSet resultSet = controller.getBookUpdateData(isbn);
+        try {
+            while(resultSet.next()){
+                model.addAttribute("bookName", resultSet.getString("BookName"));
+                model.addAttribute("authorName", resultSet.getString("AuthorName"));
+                model.addAttribute("NoOfCopies", resultSet.getInt("NoOfCopies"));
+                model.addAttribute("publishedYear", resultSet.getString("PublishedYear"));
+                model.addAttribute("publisherName", resultSet.getString("PublisherName"));
+                model.addAttribute("synopsis", resultSet.getString("Synopsis"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         model.addAttribute("isbn", isbn);
         model.addAttribute("status", 2);
-        return("bookupdate");
+        return("bookUpdate");
     }
     @GetMapping("/update")
     public String update(HttpServletRequest request, Model model) throws SQLException{

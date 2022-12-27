@@ -132,6 +132,19 @@ public class dbController{
         }
         return database.manipulate(ps);
     }
+    public ResultSet getBookUpdateData(String isbn){
+        ResultSet resultSet = null;
+        try{
+            String query = "select * from Books where isbn = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, isbn);
+            resultSet = database.retrieve(ps);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+        return(resultSet);
+    }
     public int deleteBook(String isbn) throws SQLException{
         String query = "delete from Books where ISBN = ?";
         ps = database.connection.prepareStatement(query);
