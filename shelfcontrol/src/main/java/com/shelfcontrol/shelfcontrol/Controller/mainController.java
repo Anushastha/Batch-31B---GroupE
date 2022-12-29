@@ -46,6 +46,11 @@ public class mainController {
         return "bookupload";
     }
     
+    @GetMapping({"/borrow"})
+    public String getBorrow(){
+        return "borrow";
+    }
+    
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{
         dbController controller = new dbController();
@@ -161,7 +166,7 @@ public class mainController {
         }
         model.addAttribute("isbn", isbn);
         model.addAttribute("status", 2);
-        return("bookUpdate");
+        return("bookupdate");
     }
     @GetMapping("/update")
     public String update(HttpServletRequest request, Model model) throws SQLException{
@@ -184,5 +189,17 @@ public class mainController {
         model.addAttribute("isbn", isbn);
         return("bookupdate");
     }
-    
+    @GetMapping("/delete")
+    public String delete(HttpServletRequest request, Model model){
+        int isbn = Integer.parseInt(request.getParameter("isbn"));
+        dbController controller = new dbController();
+        try {
+            controller.deleteBook(isbn);
+            model.addAttribute("isbn", isbn);
+            return("deleted");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return("bookSearch");
+    }
 }

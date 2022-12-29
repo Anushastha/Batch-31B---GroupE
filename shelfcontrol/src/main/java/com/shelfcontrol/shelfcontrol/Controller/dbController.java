@@ -145,10 +145,10 @@ public class dbController{
         }
         return(resultSet);
     }
-    public int deleteBook(String isbn) throws SQLException{
+    public int deleteBook(Integer isbn) throws SQLException{
         String query = "delete from Books where ISBN = ?";
         ps = database.connection.prepareStatement(query);
-        ps.setString(1, isbn);
+        ps.setInt(1, isbn);
         return database.manipulate(ps);
     }
 }
