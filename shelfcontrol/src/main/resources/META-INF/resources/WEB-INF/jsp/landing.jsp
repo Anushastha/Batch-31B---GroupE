@@ -27,7 +27,8 @@
                 of a person and development.</p>
 
             <div>
-                <button type="button"><span></span> Login</button>
+                <a href="login"> <button type="button"><span></span> Login</button></a>
+               
                 <button type="button"><span></span> Register</button>
             </div>
         </div>
