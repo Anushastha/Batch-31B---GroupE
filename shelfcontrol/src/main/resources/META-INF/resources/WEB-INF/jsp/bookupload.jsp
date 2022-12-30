@@ -47,6 +47,9 @@
             </div>
           </div>
           <div class="account">
+            <div>
+              <a href="userProfile" style="text-decoration: none;">
+              </div>
             <div class="account-container">
               <div class="profile-picture">
                 <div class="profile-picture-container">
@@ -58,6 +61,7 @@
                 <div class="profile-type">${Type}</div>
               </div>
             </div>
+          </a>
           </div>
         </div>
       </div>
