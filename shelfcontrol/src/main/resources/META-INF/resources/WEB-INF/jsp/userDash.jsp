@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/userDash.css" />
+    <link rel="stylesheet" href="template/css/userDash.css" />
     <title>UserDashboard</title>
   </head>
   <header>
@@ -12,7 +12,7 @@
       <div class="header-container">
         <div class="logo">
           <div class="logo-container">
-            <img id="logo" src="images/logo2.png" alt="logo" height="60px" />
+            <img id="logo" src="template/images/logo2.png" alt="logo" height="60px" />
           </div>
         </div>
         <div class="form">
@@ -41,12 +41,12 @@
           <div class="nav-right">
             <div class="notifications">
               <div class="bell-icon" id="bell-icon">
-                <img src="images/icons/bell.png" alt="" height="30px" />
+                <img src="template/images/icons/bell.png" alt="" height="30px" />
               </div>
             </div>
             <div class="account">
               <div>
-                <a href="/shelfcontrol/src/main/resources/static/userprofile.html" style="text-decoration: none;">
+                <a href="userProfile.jsp" style="text-decoration: none;">
               </div>
               <div class="account-container">
                 <div class="profile-picture">
@@ -75,7 +75,7 @@
                 <div class="nav-item">
                   <div class="nav-icon">
                     <img
-                      src="images/icons/books.png"
+                      src="template/images/icons/books.png"
                       alt="books"
                       height="34px"
                     />
@@ -88,7 +88,7 @@
                 <div class="nav-item">
                   <div class="nav-icon">
                     <img
-                      src="images/icons/borrows.png"
+                      src="template/images/icons/borrows.png"
                       alt="borrows"
                       height="32px"
                     />
@@ -101,7 +101,7 @@
                 <div class="nav-item">
                   <div class="nav-icon">
                     <img
-                      src="images/icons/reservations.png"
+                      src="template/images/icons/reservations.png"
                       alt="reservation"
                       height="30px"
                     />
@@ -114,7 +114,7 @@
                 <div class="nav-item">
                   <div class="nav-icon">
                     <img
-                      src="images/icons/subscriptions.png"
+                      src="template/images/icons/subscriptions.png"
                       alt="subscriptions"
                       height="30px"
                     />
@@ -127,7 +127,7 @@
                 <div class="nav-item">
                   <div class="nav-icon">
                     <img
-                      src="images/icons/favourites.png"
+                      src="template/images/icons/favourites.png"
                       alt="favourites"
                       height="30px"
                     />
@@ -139,7 +139,7 @@
               <div class="nav-hover">
                 <div class="nav-item">
                   <div class="nav-icon">
-                    <img src="images/icons/faqs.png" alt="faqs" height="30px" />
+                    <img src="template/images/icons/faqs.png" alt="faqs" height="30px" />
                   </div>
                   FAQs
                 </div>
@@ -150,7 +150,7 @@
                 <div id="logout" class="nav-item">
                   <div class="nav-icon">
                     <img
-                      src="images/icons/logout.png"
+                      src="template/images/icons/logout.png"
                       alt="logout"
                       height="30px"
                     />
@@ -171,16 +171,16 @@
                           <input type="radio" name="btn" id="rad4">
           
                           <div class="sliding">
-                              <img src="images/fellow.jpg" alt="">
+                              <img src="template/images/fellow.jpg" alt="">
                           </div>
                           <div class="slide">
-                              <img src="images/lll.jpg" alt="">
+                              <img src="template/images/lll.jpg" alt="">
                           </div>
                           <div class="slide">
-                              <img src="images/loginpage.png" alt="">
+                              <img src="template/images/loginpage.png" alt="">
                           </div>
                           <div class="slide">
-                              <img src="images/td.jpg" alt="">
+                              <img src="template/images/td.jpg" alt="">
                           </div>
           
                           <div class="manualslide">
@@ -207,7 +207,7 @@
                           <div class="card-img">
                             <img
                               id="book-icon"
-                              src="images/books/liberation.jpg"
+                              src="template/images/books/liberation.jpg"
                               alt=""
                               height="140px"
                             />
@@ -222,7 +222,7 @@
                           <div class="card-img">
                             <img
                               id="book-icon"
-                              src="images/books/liberation.jpg"
+                              src="template/images/books/liberation.jpg"
                               alt=""
                               height="140px"
                             />
@@ -237,7 +237,7 @@
                           <div class="card-img">
                             <img
                               id="book-icon"
-                              src="images/books/liberation.jpg"
+                              src="template/images/books/liberation.jpg"
                               alt=""
                               height="140px"
                             />
@@ -252,7 +252,7 @@
                             <div class="card-img">
                               <img
                                 id="book-icon"
-                                src="images/books/liberation.jpg"
+                                src="template/images/books/liberation.jpg"
                                 alt=""
                                 height="140px"
                               />
@@ -267,7 +267,7 @@
                             <div class="card-img">
                               <img
                                 id="book-icon"
-                                src="images/books/liberation.jpg"
+                                src="template/images/books/liberation.jpg"
                                 alt=""
                                 height="140px"
                               />
@@ -282,7 +282,7 @@
                             <div class="card-img">
                               <img
                                 id="book-icon"
-                                  src="images/books/liberation.jpg"
+                                  src="template/images/books/liberation.jpg"
                                 alt=""
                                 height="140px"
                               />
