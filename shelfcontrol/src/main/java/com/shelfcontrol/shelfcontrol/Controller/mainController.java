@@ -52,6 +52,11 @@ public class mainController {
         return "borrow";
     }
     
+    @GetMapping({"/landing"})
+    public String getLanding(){
+        return "landing";
+    }
+    
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{
         dbController controller = new dbController();
