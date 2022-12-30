@@ -9,6 +9,7 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -73,7 +74,7 @@ public class mainController {
         
     }
     @GetMapping("/auth")
-    public String getLogin(HttpServletRequest request, Model model) throws SQLException {
+    public String getLogin(HttpServletRequest request, Model model, HttpSession session) throws SQLException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String username = "";
@@ -88,7 +89,11 @@ public class mainController {
             model.addAttribute("Name", username);
             model.addAttribute("ProfileIcon", fChar);
             model.addAttribute("Type", accountType);
-            return "bookupload";
+            if(accountType.equals("Admin")){
+                session.setAttribute("username", username);
+                return "bookupload";
+            }
+            return "bookSearch";
         }
 
         else {

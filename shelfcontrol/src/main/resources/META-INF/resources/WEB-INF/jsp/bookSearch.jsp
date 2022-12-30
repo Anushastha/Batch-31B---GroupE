@@ -51,12 +51,12 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             <div class="account-container">
               <div class="profile-picture">
                 <div class="profile-picture-container">
-                  <div id="profile-icon">AD</div>
+                  <div id="profile-icon">${ProfileIcon}</div>
                 </div>
               </div>
               <div class="profile-info">
-                <div class="profile-name">Admin Name</div>
-                <div class="profile-type">Librarian</div>
+                <div class="profile-name">${Name}</div>
+                <div class="profile-type">${Type}</div>
               </div>
             </div>
           </div>

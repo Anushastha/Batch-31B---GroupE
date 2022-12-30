@@ -81,7 +81,7 @@
                   <div id="register-page">
                     <div id="register-text">Dont have an account?</div>
                     <div>
-                      <a href="" class="register-page-link">Register</a>
+                      <a href="/register" class="register-page-link">Register</a>
                     </div>
                   </div>
                 </div>
