@@ -160,3 +160,91 @@
               </div>
             </div>
           </div>
+          <div class="dashboard">
+            <div class="dashboard-container">
+              <div class="books-slider">
+                  <div class="slider">
+                      <div class="slides">
+                          <input type="radio" name="btn" id="rad1">
+                          <input type="radio" name="btn" id="rad2">
+                          <input type="radio" name="btn" id="rad3">
+                          <input type="radio" name="btn" id="rad4">
+          
+                          <div class="sliding">
+                              <img src="images/fellow.jpg" alt="">
+                          </div>
+                          <div class="slide">
+                              <img src="images/lll.jpg" alt="">
+                          </div>
+                          <div class="slide">
+                              <img src="images/loginpage.png" alt="">
+                          </div>
+                          <div class="slide">
+                              <img src="images/td.jpg" alt="">
+                          </div>
+          
+                          <div class="manualslide">
+                              <label for="rad1" class="m-btn"></label>
+                              <label for="rad2" class="m-btn"></label>
+                              <label for="rad3" class="m-btn"></label>
+                              <label for="rad4" class="m-btn"></label>
+                          </div>
+                          <div class="autoslide">
+                              <div class="auto1"></div>
+                              <div class="auto2"></div>
+                              <div class="auto3"></div>
+                              <div class="auto4"></div>
+                          </div>
+          
+                      </div>
+              </div>
+              <div class="books">
+                <div class="books-container">
+                  <div class="books-title">New Arrivals</div>
+                  <div class="books-cards">
+                   <div class="books-card-container">
+                      <div class="card-ind">
+                          <div class="card-img">
+                            <img
+                              id="book-icon"
+                              src="images/books/liberation.jpg"
+                              alt=""
+                              height="140px"
+                            />
+                          </div>
+                          <div class="card-content">
+                            <div class="card-title">Harry Potter</div>
+                            <div class="card-author">J.K Rowling</div>
+                            <div class="card-rating">3.5/5</div>
+                          </div>
+                        </div>
+                      <div class="card-ind">
+                          <div class="card-img">
+                            <img
+                              id="book-icon"
+                              src="images/books/liberation.jpg"
+                              alt=""
+                              height="140px"
+                            />
+                          </div>
+                          <div class="card-content">
+                            <div class="card-title">Harry Potter</div>
+                            <div class="card-author">J.K Rowling</div>
+                            <div class="card-rating">3.5/5</div>
+                          </div>
+                        </div>
+                      <div class="card-ind">
+                          <div class="card-img">
+                            <img
+                              id="book-icon"
+                              src="images/books/liberation.jpg"
+                              alt=""
+                              height="140px"
+                            />
+                          </div>
+                          <div class="card-content">
+                            <div class="card-title">Harry Potter</div>
+                            <div class="card-author">J.K Rowling</div>
+                            <div class="card-rating">3.5/5</div>
+                          </div>
+                        </div>
