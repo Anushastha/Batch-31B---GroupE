@@ -62,6 +62,11 @@ public class mainController {
         return "aboutus";
     }
     
+    @GetMapping({"/contact"})
+    public String getcontact(){
+        return "contact";
+    }
+    
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{
         dbController controller = new dbController();
