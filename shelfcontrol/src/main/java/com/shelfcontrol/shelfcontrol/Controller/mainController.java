@@ -51,10 +51,15 @@ public class mainController {
     public String getBorrow(){
         return "borrow";
     }
-    
+
     @GetMapping({"/landing"})
     public String getLanding(){
         return "landing";
+    }
+
+    @GetMapping({"/aboutus"})
+    public String getaboutus(){
+        return "aboutus";
     }
     
     @GetMapping("/registerUser")

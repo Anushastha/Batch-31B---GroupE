@@ -15,8 +15,8 @@
         <div class="navbar">
             <img src="template/images/logo3.png" class="logo">
             <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li> 
+                <li><a href="landing.jsp">Home</a></li>
+                <li><a href="aboutus">About Us</a></li> 
                 <li><a href="faqs.html">FAQ's</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
