@@ -66,6 +66,11 @@ public class mainController {
     public String getcontact(){
         return "contact";
     }
+
+    @GetMapping({"/faqs"})
+    public String getfaqs(){
+        return "faqs";
+    }
     
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{

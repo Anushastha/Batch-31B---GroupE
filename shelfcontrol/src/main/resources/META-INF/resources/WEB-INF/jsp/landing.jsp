@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="landing">Home</a></li>
                 <li><a href="aboutus">About Us</a></li> 
-                <li><a href="faqs.html">FAQ's</a></li>
+                <li><a href="faqs">FAQ's</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
         </div>
