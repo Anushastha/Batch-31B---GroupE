@@ -76,6 +76,11 @@ public class mainController {
     public String getuserDash(){
         return "userDash";
     }
+
+    @GetMapping({"/userProfile"})
+    public String getuserProfile(){
+        return "userProfile";
+    }
     
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{

@@ -46,7 +46,7 @@
             </div>
             <div class="account">
               <div>
-                <a href="userProfile.jsp" style="text-decoration: none;">
+                <a href="userProfile" style="text-decoration: none;">
               </div>
               <div class="account-container">
                 <div class="profile-picture">
