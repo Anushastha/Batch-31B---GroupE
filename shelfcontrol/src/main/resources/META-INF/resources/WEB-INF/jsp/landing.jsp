@@ -28,8 +28,9 @@
 
             <div>
                 <a href="login"> <button type="button"><span></span> Login</button></a>
+                <a href="register"><button type="button"><span></span> Register</button></a>
                
-                <button type="button"><span></span> Register</button>
+                
             </div>
         </div>
     </div>
