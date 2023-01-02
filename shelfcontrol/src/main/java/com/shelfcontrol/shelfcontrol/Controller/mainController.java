@@ -81,6 +81,10 @@ public class mainController {
     public String getuserProfile(){
         return "userProfile";
     }
+    @GetMapping({"/resetPasssword"})
+    public String getresetPassword(){
+        return "resetPassword";
+    }
     
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{

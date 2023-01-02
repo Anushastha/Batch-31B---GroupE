@@ -46,9 +46,7 @@
                         </div>
                         <div class="forgot-password-container">
                           <section id="forgot-text">
-                            <a href="" id="forgot-text-link"
-                              >Forgot your Password?</a
-                            >
+                            <a href="resetPassword" style="text-decoration: none;">Forgot your Password?</a>
                           </section>
                         </div>
                       </div>
