@@ -220,11 +220,8 @@ input:focus {
     line-height: 1.5;
   }
 
-  .box-1 .h3{
-    font-size: 14px;
-    font-family: "Quicksand";
+  .ques-1, .ques-2, .ques-3{
     padding: 20px;
-    
   }
 
 
@@ -244,10 +241,7 @@ input:focus {
     line-height: 1.5;
   }
 
-  .box-2 .h3{
-    font-size: 14px;
-    font-family: "Quicksand";
-  }
+
 
 
 
@@ -265,11 +259,7 @@ input:focus {
     line-height: 1.5;
   }
 
-  .box-3 .h3{
-    height: 200px;
-    font-size: 14px;
-    font-family: "Quicksand";
-  }
+  
 
   
 
