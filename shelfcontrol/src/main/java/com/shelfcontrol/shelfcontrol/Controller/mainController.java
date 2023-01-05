@@ -241,4 +241,39 @@ public class mainController {
         }
         return("bookSearch");
     }
+    @GetMapping("/updateUser")
+    public String getUserInfo(HttpServletRequest request, Model model){
+        String email = request.getParameter("Email");
+        dbController controller = new dbController();
+        ResultSet resultSet = controller.getUserData(email);
+        try {
+            while(resultSet.next()){
+                model.addAttribute("username", resultSet.getString("UserName"));
+                model.addAttribute("passOne", resultSet.getString("Password"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        model.addAttribute("Email", email );
+        model.addAttribute("status", 2);
+        return("userProfile");
+    }
+
+    @GetMapping("/userInfo")
+    public String updateInfo(HttpServletRequest request, Model model)throws SQLException{
+        String username = request.getParameter("username");
+        String email = request.getParameter("Email");
+        String password = request.getParameter("passOne");
+        String newPassword = request.getParameter("passTwo");
+        dbController controller = new dbController();
+        Users users = new Users(username, email, password, newPassword);
+        if(controller.profileUpdate(users)==1){
+            model.addAttribute("status",1);
+        }
+        else{
+            model.addAttribute("status",0);
+        }
+        return ("userProfile");
+    }
+
 }

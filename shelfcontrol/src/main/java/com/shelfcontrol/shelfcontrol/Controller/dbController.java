@@ -151,4 +151,29 @@ public class dbController{
         ps.setInt(1, isbn);
         return database.manipulate(ps);
     }
+    public ResultSet getUserData(String email){
+        ResultSet resultSet = null;
+        try{
+            String query = "select * from Users where Email = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, email);
+            resultSet = database.retrieve(ps);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+        return(resultSet);
+    }
+    public int profileUpdate(Users users)throws SQLException{
+        try{
+            String query = "update Users set UserName = ?, Password = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, users.getUsername());
+            ps.setString(2, users.getNewPassword());
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return database.manipulate(ps);
+    }
 }

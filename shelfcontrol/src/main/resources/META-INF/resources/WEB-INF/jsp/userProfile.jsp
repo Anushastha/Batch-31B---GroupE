@@ -48,12 +48,12 @@
             <div class="account-container">
               <div class="profile-picture">
                 <div class="profile-picture-container">
-                  <div id="profile-icon">AD</div>
+                  <div id="profile-icon">${ProfileIcon}</div>
                 </div>
               </div>
               <div class="profile-info">
-                <div class="profile-name">User Name</div>
-                <div class="profile-type">Student</div>
+                <div class="profile-name">${Name}</div>
+                <div class="profile-type">${Type}</div>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@
                 <div class="account-info-container">
                   <div class="profile">
                     <div class="profile-container">
-                      <div id="profile-name-icon">UN</div>
+                      <div id="profile-name-icon">${ProfileIcon}</div>
                     </div>
                   </div>
                 </div>
@@ -210,14 +210,26 @@
                   <div id="new-pass">| New Password</div>
                 </div>
               </div>
+              <div id="match-pass" class="match-pass">
+                * Incorrect password.
+              </div>
               <div class="change-btn-area">
                 <button id="change-btn">Change</button>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script>
+    var status = "${status}";
+    var email = document.getElementById("Email")
+    var passOne = document.getElementsById("passOne");
+    if(passOne==this.email[i]){
+      alert("Password successfully updated.")
+    }else if(status == "false"){
+      passOne.style.borderBottom = "solid 1px red"
+    }
+  </script>
 </html>
