@@ -91,16 +91,25 @@ public class dbController{
         }
         return database.manipulate(ps);
     }
-    public List <search> bookData(String search){
+    public List <search> bookData(String search, String category){
         ResultSet resultSet = null;
+        String query;
         List <search> result = new ArrayList<>();
         try{
-            String query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ?";
-            ps = database.connection.prepareStatement(query);
-            ps.setString(1, search);
-            ps.setString(2, search);
-            ps.setString(3, search);
-            resultSet = database.retrieve(ps);   
+            if(search != ""){
+                query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ?";
+                ps = database.connection.prepareStatement(query);
+                ps.setString(1, search);
+                ps.setString(2, search);
+                ps.setString(3, search);
+                resultSet = database.retrieve(ps);
+            }
+            else{
+                query = "select * from Books where Category = ?";
+                ps = database.connection.prepareStatement(query);
+                ps.setString(1, category);
+                resultSet = database.retrieve(ps);
+            }   
             while (resultSet.next()){
                 search s = new search();
                 s.setAuthorName(resultSet.getString("AuthorName"));
