@@ -108,7 +108,7 @@ public class mainController {
         
     }
     @GetMapping("/auth")
-    public String getLogin(HttpServletRequest request, Model model, HttpSession session) throws SQLException {
+    public String getLogin(HttpServletRequest request, Model model) throws SQLException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String username = "";
@@ -123,8 +123,10 @@ public class mainController {
             model.addAttribute("Name", username);
             model.addAttribute("ProfileIcon", fChar);
             model.addAttribute("Type", accountType);
+            HttpSession session = request.getSession();
+            session.setAttribute("name", username);
+            session.setAttribute("type", accountType);
             if(accountType.equals("Admin")){
-                session.setAttribute("username", username);
                 return "bookupload";
             }
             return "bookSearch";
@@ -172,7 +174,8 @@ public class mainController {
     public String searchBooks(HttpServletRequest request, ServletResponse response, Model model) throws SQLException, ServletException, IOException{
         dbController controller = new dbController();
         String search = request.getParameter("bookName");
-        List <search> result = controller.bookData(search);
+        String category = request.getParameter("genre");
+        List <search> result = controller.bookData(search, category );
         if(result.isEmpty()){
             model.addAttribute("status", 0);
         }
