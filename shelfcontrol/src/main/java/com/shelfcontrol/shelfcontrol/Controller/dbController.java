@@ -148,7 +148,18 @@ public class dbController{
     public int deleteBook(Integer isbn) throws SQLException{
         String query = "delete from Books where ISBN = ?";
         ps = database.connection.prepareStatement(query);
-        ps.setInt(1, isbn);
+        ps.setInt(1, isbn); 
         return database.manipulate(ps);
     }
+
+    public int deleteAccount(String email) throws SQLException{
+
+        String query = "delete from Users where Email = ?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, email);
+        status = database.manipulate(ps);
+        return status;
+    }
+
+
 }

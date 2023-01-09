@@ -181,7 +181,10 @@
                 </div>
               </div>
               <div class="delete-btn-area">
+                <form action="/deleteAcc">
+                  <input name = "name" hidden value= <c:out value="${Name}" />>
                 <button id="delete-btn">Delete Account</button>
+              </form>
               </div>
             </div>
           </div>

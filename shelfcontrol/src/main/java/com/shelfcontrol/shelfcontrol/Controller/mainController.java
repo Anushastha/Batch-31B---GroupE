@@ -11,6 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.User;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -127,7 +128,7 @@ public class mainController {
                 session.setAttribute("username", username);
                 return "bookupload";
             }
-            return "bookSearch";
+            return "userDash";
         }
 
         else {
@@ -240,5 +241,20 @@ public class mainController {
             e.printStackTrace();
         }
         return("bookSearch");
+    }
+    
+
+
+@GetMapping("/deleteAccount")
+    public String deleteAcc(HttpServletRequest request) throws SQLException{
+        String email = request.getParameter("email");
+        dbController controller = new dbController();
+        if(controller.deleteAcc(email) != 0){
+            return("login");
+
+        }
+        else {
+            return("userProfile");
+        }
     }
 }
