@@ -5,7 +5,7 @@
 }
 html {
   background-color: #eef1f6;
-  overflow: scroll;
+  overflow: auto;
 }
 header {
   background-color: #ffffff;
@@ -149,6 +149,7 @@ input:focus {
   width: fit-content;
   padding: 20px;
   margin: auto;
+  color: #fff;
   padding-top: 10px;
   transition-duration: 0.15s;
   cursor: pointer;

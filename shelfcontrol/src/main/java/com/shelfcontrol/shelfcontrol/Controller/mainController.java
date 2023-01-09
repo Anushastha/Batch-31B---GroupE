@@ -86,6 +86,14 @@ public class mainController {
     public String getresetPassword(){
         return "resetPassword";
     }
+    @GetMapping({"/subscription"})
+    public String getsubscrition(){
+        return "subscription";
+    }
+    @GetMapping({"/subscriptionForm"})
+    public String getsubscriptionForm(){
+        return "subscriptionForm";
+    }
     
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{

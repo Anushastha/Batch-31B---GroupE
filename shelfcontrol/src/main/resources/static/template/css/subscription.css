@@ -6,7 +6,7 @@
 }
 html {
   background-color: #eef1f6;
-  overflow: hidden;
+  overflow: auto;
 }
 header {
   background-color: #ffffff;
@@ -152,6 +152,7 @@ input:focus {
   padding: 20px;
   margin: auto;
   padding-top: 10px;
+  color: #fff;
   transition-duration: 0.15s;
   cursor: pointer;
 }
@@ -540,4 +541,9 @@ body {
   background-color: green;
   padding: auto;
   color: white;
+}
+.buy-now-button:hover{
+  background-color: rgb(36, 165, 36);
+  color: white;
+  cursor: pointer;
 }
