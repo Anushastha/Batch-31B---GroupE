@@ -91,16 +91,25 @@ public class dbController{
         }
         return database.manipulate(ps);
     }
-    public List <search> bookData(String search){
+    public List <search> bookData(String search, String category){
         ResultSet resultSet = null;
+        String query;
         List <search> result = new ArrayList<>();
         try{
-            String query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ?";
-            ps = database.connection.prepareStatement(query);
-            ps.setString(1, search);
-            ps.setString(2, search);
-            ps.setString(3, search);
-            resultSet = database.retrieve(ps);   
+            if(search != ""){
+                query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ?";
+                ps = database.connection.prepareStatement(query);
+                ps.setString(1, search);
+                ps.setString(2, search);
+                ps.setString(3, search);
+                resultSet = database.retrieve(ps);
+            }
+            else{
+                query = "select * from Books where Category = ?";
+                ps = database.connection.prepareStatement(query);
+                ps.setString(1, category);
+                resultSet = database.retrieve(ps);
+            }   
             while (resultSet.next()){
                 search s = new search();
                 s.setAuthorName(resultSet.getString("AuthorName"));
@@ -151,6 +160,7 @@ public class dbController{
         ps.setInt(1, isbn); 
         return database.manipulate(ps);
     }
+<<<<<<< HEAD
 
     public int deleteAccount(String email) throws SQLException{
 
@@ -162,4 +172,31 @@ public class dbController{
     }
 
 
+=======
+    public ResultSet getUserData(String email){
+        ResultSet resultSet = null;
+        try{
+            String query = "select * from Users where Email = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, email);
+            resultSet = database.retrieve(ps);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
+        return(resultSet);
+    }
+    public int profileUpdate(Users users)throws SQLException{
+        try{
+            String query = "update Users set UserName = ?, Password = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, users.getUsername());
+            ps.setString(2, users.getNewPassword());
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return database.manipulate(ps);
+    }
+>>>>>>> c85138a82e7f757198db5197bb5c0f92464a117f
 }

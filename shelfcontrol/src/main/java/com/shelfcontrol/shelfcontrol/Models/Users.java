@@ -8,6 +8,7 @@ public class Users {
     private int booksRead;
     private String theme;
     private String accountType;
+    private String newPassword;
 
     public Users(String username, String email, String password, int subscribed, int booksRead, String theme,
             String accountType) {
@@ -18,6 +19,13 @@ public class Users {
         this.booksRead = booksRead;
         this.theme = theme;
         this.accountType = accountType;
+    }
+
+    public Users(String username, String email, String password, String newPassword){
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.newPassword = newPassword;
     }
 
     public String getUsername() {
@@ -46,6 +54,9 @@ public class Users {
 
     public String getAccountType() {
         return accountType;
+    }
+    public String getNewPassword(){
+        return newPassword;
     }
 
 }

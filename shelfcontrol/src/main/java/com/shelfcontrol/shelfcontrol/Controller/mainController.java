@@ -109,7 +109,7 @@ public class mainController {
         
     }
     @GetMapping("/auth")
-    public String getLogin(HttpServletRequest request, Model model, HttpSession session) throws SQLException {
+    public String getLogin(HttpServletRequest request, Model model) throws SQLException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String username = "";
@@ -124,6 +124,9 @@ public class mainController {
             model.addAttribute("Name", username);
             model.addAttribute("ProfileIcon", fChar);
             model.addAttribute("Type", accountType);
+            HttpSession session = request.getSession();
+            session.setAttribute("name", username);
+            session.setAttribute("type", accountType);
             if(accountType.equals("Admin")){
                 session.setAttribute("username", username);
                 return "bookupload";
@@ -173,7 +176,8 @@ public class mainController {
     public String searchBooks(HttpServletRequest request, ServletResponse response, Model model) throws SQLException, ServletException, IOException{
         dbController controller = new dbController();
         String search = request.getParameter("bookName");
-        List <search> result = controller.bookData(search);
+        String category = request.getParameter("genre");
+        List <search> result = controller.bookData(search, category );
         if(result.isEmpty()){
             model.addAttribute("status", 0);
         }
@@ -242,6 +246,7 @@ public class mainController {
         }
         return("bookSearch");
     }
+<<<<<<< HEAD
     
 
 
@@ -258,3 +263,41 @@ public class mainController {
         }
     }
 }
+=======
+    @GetMapping("/updateUser")
+    public String getUserInfo(HttpServletRequest request, Model model){
+        String email = request.getParameter("Email");
+        dbController controller = new dbController();
+        ResultSet resultSet = controller.getUserData(email);
+        try {
+            while(resultSet.next()){
+                model.addAttribute("username", resultSet.getString("UserName"));
+                model.addAttribute("passOne", resultSet.getString("Password"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        model.addAttribute("Email", email );
+        model.addAttribute("status", 2);
+        return("userProfile");
+    }
+
+    @GetMapping("/userInfo")
+    public String updateInfo(HttpServletRequest request, Model model)throws SQLException{
+        String username = request.getParameter("username");
+        String email = request.getParameter("Email");
+        String password = request.getParameter("passOne");
+        String newPassword = request.getParameter("passTwo");
+        dbController controller = new dbController();
+        Users users = new Users(username, email, password, newPassword);
+        if(controller.profileUpdate(users)==1){
+            model.addAttribute("status",1);
+        }
+        else{
+            model.addAttribute("status",0);
+        }
+        return ("userProfile");
+    }
+
+}
+>>>>>>> c85138a82e7f757198db5197bb5c0f92464a117f
