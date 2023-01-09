@@ -8,115 +8,14 @@
     <title>Book Update</title>
   </head>
   <header>
-    <div class="header">
-      <div class="header-container">
-        <div class="logo">
-          <div class="logo-container">
-            <img id="logo" src="/template/images/logo2.png" alt="logo" height="60px" />
-          </div>
-        </div>
-        <div class="form">
-          <div class="form-container">
-            <div class="search">
-              <div class="search-bar-container">
-                <input
-                  class="search-bar-input"
-                  type="text"
-                  name="bookName"
-                  id="book"
-                  placeholder="Search for book title, author, publisher or users"
-                />
-              </div>
-              <div class="Genre-container">
-                <select name="genre" id="genre">
-                  <option value="horror">Horror</option>
-                  <option value="classic">Classic</option>
-                  <option value="fiction">Fiction</option>
-                  <option value="thriller">Thriller</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nav-right">
-          <div class="notifications">
-            <div class="bell-icon" id="bell-icon">
-              <img src="/template/images/icons/bell.png" alt="" height="30px" />
-            </div>
-          </div>
-          <div class="account">
-            <div class="account-container">
-              <div class="profile-picture">
-                <div class="profile-picture-container">
-                  <div id="profile-icon">${ProfileIcon}</div>
-                </div>
-              </div>
-              <div class="profile-info">
-                <div class="profile-name">${Name}</div>
-                <div class="profile-type">${Type}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <jsp:include page="adminTopBar.jsp" />
   </header>
   <body>
     <div class="body">
       <div class="body-contianer">
         <div class="navigation">
-          <div class="navigation-container">
-            <div class="line"></div>
-            <div class="nav-hover">
-              <div class="nav-item">
-                <div class="nav-icon">
-                  <img
-                    src="/template/images/icons/addBooks.png"
-                    alt="add books"
-                    height="30px"
-                  />
-                </div>
-                Add Books
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="nav-hover">
-              <div class="nav-item">
-                <div class="nav-icon">
-                  <img
-                    src="/template/images/icons/users.png"
-                    alt="users"
-                    height="30px"
-                  />
-                </div>
-                Users
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="nav-hover">
-              <div class="nav-item">
-                <div class="nav-icon">
-                  <img
-                    src="/template/images/icons/reservations.png"
-                    alt="reservation"
-                    height="30px"
-                  />
-                </div>
-                Reservations
-              </div>
-            </div>
-            <div class="line"></div>
-            <div id="bottom" class="line"></div>
-            <div id="logout" class="nav-item">
-              <div class="nav-icon">
-                <img
-                  src="/template/images/icons/logout.png"
-                  alt="logout"
-                  height="30px"
-                />
-              </div>
-              <div id="logout-text">Log Out</div>
-            </div>
+          <div class="navigation-contianer">
+            <jsp:include page="adminNavBar.jsp" />
           </div>
         </div>
       </div>

@@ -109,12 +109,12 @@ public class mainController {
         
     }
     @GetMapping("/auth")
-    public String getLogin(HttpServletRequest request, Model model) throws SQLException {
+    public String getLogin(HttpServletRequest request, Model model, ServletResponse response) throws SQLException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String username = "";
         String fChar = "";
-        String accountType ="";
+        String accountType = "";
         dbController controller = new dbController();
         Method method = new Method();
         if (controller.login(email, password)) {
@@ -125,10 +125,11 @@ public class mainController {
             model.addAttribute("ProfileIcon", fChar);
             model.addAttribute("Type", accountType);
             HttpSession session = request.getSession();
-            session.setAttribute("name", username);
+            session.setAttribute("user", username);
             session.setAttribute("type", accountType);
-            if(accountType.equals("Admin")){
-                session.setAttribute("username", username);
+            session.setAttribute("firstname", fChar);
+            session.setAttribute("email", email);
+            if (accountType.equals("Admin")) {
                 return "bookupload";
             }
             return "userDash";
@@ -188,8 +189,13 @@ public class mainController {
         model.addAttribute("search", search);
         model.addAttribute("result", result);
         request.setAttribute("result", result);
-        return("bookSearch");
-
+        if(request.getSession().getAttribute("type") == "Admin"){
+            return ("bookSearch");
+        }
+        else{
+            return("bookSearchUser");
+        }
+        
     }
     @GetMapping("/updatePage")
     public String getUpdatePage(HttpServletRequest request, Model model){
@@ -246,7 +252,6 @@ public class mainController {
         }
         return("bookSearch");
     }
-<<<<<<< HEAD
     
 
 
@@ -254,7 +259,7 @@ public class mainController {
     public String deleteAcc(HttpServletRequest request) throws SQLException{
         String email = request.getParameter("email");
         dbController controller = new dbController();
-        if(controller.deleteAcc(email) != 0){
+        if(controller.deleteAccount(email) != 0){
             return("login");
 
         }
@@ -262,8 +267,6 @@ public class mainController {
             return("userProfile");
         }
     }
-}
-=======
     @GetMapping("/updateUser")
     public String getUserInfo(HttpServletRequest request, Model model){
         String email = request.getParameter("Email");
@@ -300,4 +303,3 @@ public class mainController {
     }
 
 }
->>>>>>> c85138a82e7f757198db5197bb5c0f92464a117f

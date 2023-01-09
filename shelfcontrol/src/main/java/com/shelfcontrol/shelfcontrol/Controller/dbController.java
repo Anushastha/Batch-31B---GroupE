@@ -160,7 +160,6 @@ public class dbController{
         ps.setInt(1, isbn); 
         return database.manipulate(ps);
     }
-<<<<<<< HEAD
 
     public int deleteAccount(String email) throws SQLException{
 
@@ -172,7 +171,6 @@ public class dbController{
     }
 
 
-=======
     public ResultSet getUserData(String email){
         ResultSet resultSet = null;
         try{
@@ -198,5 +196,4 @@ public class dbController{
         }
         return database.manipulate(ps);
     }
->>>>>>> c85138a82e7f757198db5197bb5c0f92464a117f
 }
