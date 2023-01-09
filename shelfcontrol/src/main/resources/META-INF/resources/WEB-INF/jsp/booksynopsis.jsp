@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/booksynopsis.css" />
+    <link rel="stylesheet" href="template/css/booksynopsis.css" />
+
+    <!-- for favourite button -->
+    <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
 
     <title>Book Synopsis</title>
   </head>
@@ -13,7 +16,7 @@
       <div class="header-container">
         <div class="logo">
           <div class="logo-container">
-            <img id="logo" src="images/logo2.png" alt="logo" height="60px" />
+            <img id="logo" src="template/images/logo2.png" alt="logo" height="60px" />
           </div>
         </div>
         <div class="form">
@@ -42,7 +45,7 @@
         <div class="nav-right">
           <div class="notifications">
             <div class="bell-icon" id="bell-icon">
-              <img src="images/icons/bell.png" alt="" height="30px" />
+              <img src="template/images/icons/bell.png" alt="" height="30px" />
             </div>
           </div>
           <div class="account">
@@ -72,7 +75,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="images/icons/books.png"
+                    src="template/images/icons/books.png"
                     alt="books"
                     height="34px"
                   />
@@ -85,7 +88,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="images/icons/borrows.png"
+                    src="template/images/icons/borrows.png"
                     alt="borrows"
                     height="32px"
                   />
@@ -98,7 +101,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="images/icons/reservations.png"
+                    src="template/images/icons/reservations.png"
                     alt="reservation"
                     height="30px"
                   />
@@ -111,7 +114,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="images/icons/subscriptions.png"
+                    src="template/images/icons/subscriptions.png"
                     alt="subscriptions"
                     height="30px"
                   />
@@ -124,7 +127,7 @@
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="images/icons/favourites.png"
+                    src="template/images/icons/favourites.png"
                     alt="favourites"
                     height="30px"
                   />
@@ -136,7 +139,7 @@
             <div class="nav-hover">
               <div class="nav-item">
                 <div class="nav-icon">
-                  <img src="images/icons/faqs.png" alt="faqs" height="30px" />
+                  <img src="template/images/icons/faqs.png" alt="faqs" height="30px" />
                 </div>
                 FAQs
               </div>
@@ -147,7 +150,7 @@
               <div id="logout" class="nav-item">
                 <div class="nav-icon">
                   <img
-                    src="images/icons/logout.png"
+                    src="template/images/icons/logout.png"
                     alt="logout"
                     height="30px"
                   />
@@ -163,7 +166,7 @@
           <div class="image-container">
           <div class="image">
             <img 
-              src="images/candyHouse.png"
+              src="template/images/candyHouse.png"
               alt="image"
               width="200px"
               height="270px"
@@ -176,7 +179,7 @@
                 Harry Potter And The Prizoner Of Azkaban
               </div>
               <div class="favourite">
-                <button onclick="" id="favbtn" class="btn"><i class="fas fa-heart"></i></button>
+                <button onclick="Toggle1()" id="favbtn" class="btn"><i class="fas fa-heart"></i></button>
               </div>
             </div>
               <div class="author">
@@ -215,4 +218,16 @@
       </div>
     </div>
   </body>
+  <script>
+    // Favourite Button   
+    var btn = document.getElementById('favbtn');
+    function Toggle1(){
+             if (btn.style.color =="gold") {
+                 btn.style.color = "grey"
+             }
+             else{
+                 btn.style.color = "gold"
+             }
+    }
+        </script>
 </html>

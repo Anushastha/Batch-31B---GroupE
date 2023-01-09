@@ -62,6 +62,7 @@
                   <div class="books-cards">
                    <div class="books-card-container">
                       <div class="card-ind">
+                        <a href="booksynopsis" style="text-decoration: none;">
                           <div class="card-img">
                             <img
                               id="book-icon"
@@ -73,8 +74,9 @@
                           <div class="card-content">
                             <div class="card-title">Harry Potter</div>
                             <div class="card-author">J.K Rowling</div>
-                            <div class="card-rating">3.5/5</div>
+                            <div class="card-rating">4/5</div>
                           </div>
+                          </a>
                         </div>
                       <div class="card-ind">
                           <div class="card-img">

@@ -94,7 +94,11 @@ public class mainController {
     public String getsubscriptionForm(){
         return "subscriptionForm";
     }
-    
+    @GetMapping({"/booksynopsis"})
+    public String getbooksynopsis(){
+        return "booksynopsis";
+    }
+
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException{
         dbController controller = new dbController();

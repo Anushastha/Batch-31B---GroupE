@@ -1,16 +1,11 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Quicksand";
 }
-body {
+html {
   background-color: #eef1f6;
-
-  height: 100vh;
-  width: 100%;
+  overflow: scroll;
 }
 header {
   background-color: #ffffff;
@@ -69,11 +64,11 @@ header {
   background: url("https://static.thenounproject.com/png/101791-200.png")
     no-repeat 450px;
   background-size: 20px;
+  cursor: pointer;
 }
 input:focus {
   outline: none;
 }
-
 .nav-right {
   display: flex;
   margin-left: auto;
@@ -114,10 +109,9 @@ input:focus {
   border-radius: 8px;
 }
 .account-container:hover {
-  color: #21303ccf;
+  color:black;
   background-color: #fafafa;
 }
-
 #profile-icon {
   background-color: #c9f2c8;
   width: 40px;
@@ -146,7 +140,7 @@ input:focus {
 }
 .navigation-container {
   width: 156px;
-  height: 100vh;
+  height: 110vh;
   background-color: #21303c;
   color: #fff;
   text-align: center;
@@ -177,77 +171,115 @@ input:focus {
 #logout-text {
   margin-top: 5px;
 }
-.body {
-  height: 100vh;
-  margin: 0px;
-  border: solid px;
-  font-family: "Quicksand";
-  background-color: #eef1f6;
-  
+.body-contianer {
   display: flex;
-  
-}
-.box{
-    height: 600px;
-    width: 1030px;
-    background: white;
-    margin-left: 80px;
-    margin-top: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 5px rgba(0, 0,0,0.2);
-    display: flex;
-    position: relative;
-}
-.box .pic{
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    padding: 0;
-    background: #888b8b;
-    height: 280px;
-    width: 220px;
-
-}
-.box .main{
-    position: absolute;
-    top: 20px;
-    left:300px;
-    width: 700px;
-    height: 330px;
-  
-    
-}
-.author{
-  margin-top: 20px;
-  font-weight: 800;
-}
-.publish{
-  margin-top: 20px;
-}
-.rating{
-  margin-top: 20px;
 }
 
-button{
-  display: block;
-  font-size: 0.8em;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.main{
+  background-color: #fbfcff;
+  margin: 25px;
+  border: solid 2px #eefbfc;
+  border-radius: 12px;
+  color: #21303c;
+  padding: 25px 30px;
+  width: fit-content;
+  height: fit-content;
+}
+.info-section{
+  width: 970px;
+  height: 300px;
+  display: flex;
+}
+
+.image{
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 270px;
+  width: 200px;
+
+}
+.info-container{
+  height: 180px;
+  margin-left: 20px;
+  border: #53bdc7;
+}
+.top{
+  display: flex;
+}
+.title{
+  position: relative;
+  color: black;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  height: 50px;
+  width: 600px;
+}
+.author,.date,.ratings{
+  position: relative;
+  height: 40px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  color: black;
+  font-weight: 500;
+  font-size: 22px;
+}
+.buttons{
+  position: absolute;
+  left: 430px;
+  top: 330px;
+}
+.booknow,.preview{
+  margin-top: 8px;
+}
+#booknow-btn,#preview-btn{
   width: 100px;
   height: 30px;
-  background-color: #21303C;
+  background-color: #21303c;
+  font-weight: normal;
+  color: #ffffff;
+  border-style: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#booknow-btn:hover, #preview-btn:hover{
+  background-color:#384651;
   color: white;
+  cursor: pointer;
 }
-
-
-
-.desc{
-  height: 250px;
-  width: 980px;
-  margin-top: 325px;
-  margin-left: 25px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border-radius: 20px;
+.bottom-section{
+  background-color: #fbfcff;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  width: 970px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: auto;
 }
-
+.information{
+  position: absolute;
+  padding: 25px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  height: fit-content;
+}
+.favourite{
+  position: absolute;
+  top: 145px;
+  right: 140px;
+  display: flex;
+}
+.btn{
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  outline: none;
+  color: grey;
+}
+.btn i:hover{
+  cursor: pointer;
+}

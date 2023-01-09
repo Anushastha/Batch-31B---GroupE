@@ -6,7 +6,7 @@
 }
 html {
   background-color: #eef1f6;
-  overflow: hidden;
+  overflow: scroll;
 }
 header {
   background-color: #ffffff;
@@ -232,10 +232,12 @@ body {
   text-align: start;
 }
 .card-title {
+  color: black;
   font-size: 14px;
   font-weight: 600;
 }
 .card-author {
+  color: black;
   font-size: 12px;
   font-weight: 400;
 }
