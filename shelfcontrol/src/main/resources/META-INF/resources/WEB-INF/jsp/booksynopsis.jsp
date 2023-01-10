@@ -177,11 +177,11 @@
             <div class="top">
               <div class="title">
                 Harry Potter And The Prizoner Of Azkaban
-              </div>
               <div class="favourite">
                 <button onclick="Toggle1()" id="favbtn" class="btn"><i class="fas fa-heart"></i></button>
               </div>
             </div>
+          </div>
               <div class="author">
                 J.K. Rowling
               </div>
@@ -208,10 +208,7 @@
               a single curse, he was said to be the heir apparent to the Dark Lord, 
               Voldemort.Now he has escaped, leaving only two clues as to where he might 
               be headed: Harry Potter's defeat of You-Know-Who was Black's downfall 
-              as well. And the Azkaban guards heard Black muttering in his sleep, 
-              "He's at Hogwarts . . . he's at Hogwarts."Harry Potter isn't safe, not 
-              even within the walls of his magical school, surrounded by his friends.
-              Because on top of it all, there may well be a traitor in their midst.
+               as well.
               </p>
           </div>
         </div>
