@@ -20,17 +20,20 @@
         </div>
       </div>
       <div class="user-side">
+        <% String username=(String)session.getAttribute("user");
+          String email= (String)session.getAttribute("email");%>
+        <form action="/updateType">
         <div class="sub-form">
             <div class="title">Subscription Form</div>
             <div class="name-container">
                 <label for="user-name">User Name</label>
                 <br/>
-                <input type="text" name="name" id="name" required/>
+                <input type="text" name="name" id="name" value="<%out.print(username);%>"/>
             </div>
             <div class="emailContainer">
               <label for="email-address">E-mail Address</label>
               <br/>
-              <input type="email" name="emailAddress" id="emailAddress" required/>
+              <input type="email" name="emailAddress" id="emailAddress" value="<%out.print(email);%>"/>
             </div>
             <div class="date">
               <label for="date">Payment Date</label>
@@ -63,6 +66,7 @@
               <button id="confirm-button" onclick="paydone()">Confirm Payment</button>
             </div>
             </div>
+          </form>
         </div>
       </div> 
 </body>

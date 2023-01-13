@@ -134,12 +134,14 @@ public class mainController {
             accountType = controller.getType(email);
             fChar = method.firstCharacter(username);
             model.addAttribute("Name", username);
+            model.addAttribute("password", password);
             model.addAttribute("ProfileIcon", fChar);
             model.addAttribute("Type", accountType);
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
             session.setAttribute("type", accountType);
             session.setAttribute("firstname", fChar);
+            session.setAttribute("password", password);
             session.setAttribute("email", email);
             if (accountType.equals("Admin")) {
                 return "bookupload";
@@ -313,5 +315,38 @@ public class mainController {
         }
         return ("userProfile");
     }
+    @GetMapping("/getEmail")
+    public String getEmail(HttpServletRequest request, Model model){
+        String email = request.getParameter("emailAddress");
+        dbController controller = new dbController();
+        ResultSet resultSet = controller.getAccType(email);
+        try {
+            while(resultSet.next()){
+                model.addAttribute("emailAddress", resultSet.getString("Email"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        model.addAttribute("emailAddress", email );
+        model.addAttribute("status", 1);
+        return("subscriptionForm");
+    }
+    
+    @GetMapping("/updateType")
+    public String updateType(HttpServletRequest request, Model model) throws SQLException{
+        String email = request.getParameter("emailAddress");
+        int months = Integer.parseInt(request.getParameter("months"));
+        dbController controller = new dbController();
+        Users user = new Users(email);
+        if(controller.typeUpdate(user) == 1){
+            model.addAttribute("status", 1);;
+            model.addAttribute("months", months);
+            return "bookupload";
+        } else {
+            model.addAttribute("status", 0);
+        }
+        return "userDash";
+    }
+    
 
 }

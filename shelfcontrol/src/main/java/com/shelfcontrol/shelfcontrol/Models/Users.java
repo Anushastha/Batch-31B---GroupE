@@ -28,6 +28,11 @@ public class Users {
         this.newPassword = newPassword;
     }
 
+    public Users(String email){
+        this.email = email;
+       
+    }
+
     public String getUsername() {
         return username;
     }

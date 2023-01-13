@@ -196,4 +196,41 @@ public class dbController{
         }
         return database.manipulate(ps);
     }
+
+    public String getPass(String email) throws SQLException{
+        String password = "";
+        String query = "select Password from Users where Email=?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1,password);
+        ResultSet result = database.retrieve(ps);
+        while(result.next()){
+            password = result.getString("Password");
+        }
+        return password;
+    }
+
+    public ResultSet getAccType(String email) {
+        ResultSet resultSet = null;
+        try {
+            String query = "select AccountType from Users where Email = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, email);
+            resultSet = database.retrieve(ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return (resultSet);
+    }
+
+    public int typeUpdate(Users users) throws SQLException {
+        try {
+            String query = "update Users set Subscribed = ? where Email = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setInt(1, 1);
+            ps.setString(2, users.getEmail());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return database.manipulate(ps);
+    }
 }

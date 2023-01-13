@@ -21,8 +21,9 @@
       </div>
       <% String username=(String)session.getAttribute("user");
       String fchar =(String)session.getAttribute("firstname");
-      String email= (String)session.getAttribute("email"); %>
-      <form action="/userInfo"></form>
+      String email= (String)session.getAttribute("email");
+      String password = (String)session.getAttribute("password");%>
+      <form action="/userInfo">
       <div class="user-page">
         <div class="user-page-container">
           <div class="user-page-left">
@@ -79,7 +80,7 @@
                 </div>
               </div>
               <div id="match-pass" class="match-pass">
-                * Incorrect password.
+                * Password Incorrect.
               </div>
               <div class="change-btn-area">
                 <button id="change-btn">Change</button>
@@ -88,15 +89,17 @@
           </div>
         </div>
       </div>
+    </form>
     </div>
   </body>
   <script>
-    var status = "${status}";
+    //var status = "${status}";
     var email = document.getElementById("Email")
     var passOne = document.getElementsById("passOne");
-    if(passOne==this.email[i]){
-      alert("Password successfully updated.")
-    }else if(status == "false"){
+    var session = data = '@Session["passOne"]';
+    if(session==passOne){
+      passOne.style.borderBottom = "solid 1px green"
+    }else{
       passOne.style.borderBottom = "solid 1px red"
     }
   </script>
