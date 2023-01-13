@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Year;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -188,22 +189,22 @@ public class mainController {
         }
     }
     @GetMapping("/SearchBooks")
-    public String searchBooks(HttpServletRequest request, ServletResponse response, Model model) throws SQLException, ServletException, IOException{
+    public String searchBooks(HttpServletRequest request, ServletResponse response, Model model)
+            throws SQLException, ServletException, IOException {
         dbController controller = new dbController();
         String search = request.getParameter("bookName");
         String category = request.getParameter("genre");
-        List <search> result = controller.bookData(search, category );
-        if(result.isEmpty()){
+        List<search> result = new ArrayList<>();
+        result = controller.bookData(search, category);
+        if (result.isEmpty()) {
             model.addAttribute("status", 0);
-        }
-        else{
+        } else {
             model.addAttribute("status", 1);
-
         }
         model.addAttribute("search", search);
         model.addAttribute("result", result);
         request.setAttribute("result", result);
-        if(request.getSession().getAttribute("type") == "Admin"){
+        if(request.getSession().getAttribute("type").equals("Admin")){
             return ("bookSearch");
         }
         else{

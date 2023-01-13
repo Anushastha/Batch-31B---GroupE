@@ -93,23 +93,15 @@ public class dbController{
     }
     public List <search> bookData(String search, String category){
         ResultSet resultSet = null;
-        String query;
         List <search> result = new ArrayList<>();
         try{
-            if(search != ""){
-                query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ?";
-                ps = database.connection.prepareStatement(query);
-                ps.setString(1, search);
-                ps.setString(2, search);
-                ps.setString(3, search);
-                resultSet = database.retrieve(ps);
-            }
-            else{
-                query = "select * from Books where Category = ?";
-                ps = database.connection.prepareStatement(query);
-                ps.setString(1, category);
-                resultSet = database.retrieve(ps);
-            }   
+            String query = "select * from Books where BookName = ? or AuthorName = ? or PublisherName = ? or Category = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, search);
+            ps.setString(2, search);
+            ps.setString(3, search);
+            ps.setString(4, category);
+            resultSet = database.retrieve(ps);
             while (resultSet.next()){
                 search s = new search();
                 s.setAuthorName(resultSet.getString("AuthorName"));

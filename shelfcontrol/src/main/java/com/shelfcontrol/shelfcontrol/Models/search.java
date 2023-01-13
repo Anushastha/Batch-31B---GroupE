@@ -1,6 +1,5 @@
 package com.shelfcontrol.shelfcontrol.Models;
 
-
 import java.time.Year;
 
 public class search {
@@ -60,4 +59,3 @@ public class search {
         this.publishedYear = publishedYear;
     }
 }
-
