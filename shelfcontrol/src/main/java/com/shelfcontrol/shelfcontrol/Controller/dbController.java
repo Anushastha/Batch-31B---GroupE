@@ -225,4 +225,21 @@ public class dbController{
         }
         return database.manipulate(ps);
     }
+
+
+ //new code reset
+
+ public int resetPassword(Users users) throws SQLException{
+    try{
+        String query = "update Users set Password=? where Email=?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, users.getPassword());
+        ps.setString(2, users.getEmail());
+    }
+    catch(SQLException e){
+        e.printStackTrace();
+    }
+    return database.manipulate(ps);
 }
+}
+//

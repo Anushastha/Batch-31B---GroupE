@@ -350,4 +350,23 @@ public class mainController {
     }
     
 
+
+
+//resetpassword 
+@GetMapping("/show")
+public String resetPass(HttpServletRequest request, Model model)throws SQLException{
+    String email = request.getParameter("emailAddress");
+    String password = request.getParameter("password");
+    String newPassword = request.getParameter("confirmPassword");
+    dbController controller = new dbController();
+    Users users = new Users(email, password, newPassword);
+    if(controller.resetPassword(users)==1){
+        model.addAttribute("status",1);
+    }
+    else{
+        model.addAttribute("status",0);
+    }
+    return ("login");
+}
+
 }

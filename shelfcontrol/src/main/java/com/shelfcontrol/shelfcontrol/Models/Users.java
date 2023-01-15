@@ -64,4 +64,12 @@ public class Users {
         return newPassword;
     }
 
+    //resetpass
+    public Users(String email, String password,String newPassword ){
+        this.email = email;
+        this.password = password;
+        this.newPassword = newPassword;
+    }
+    //
+
 }
