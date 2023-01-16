@@ -2,8 +2,8 @@
 
 .row{
     
-    height: 500px;
-    width: 430px;
+    height: 410px;
+    width: 350px;
     background: white;
     padding: 20px;
     margin-left: 560px;
@@ -23,7 +23,7 @@
   }
 
 .block-1{
-    margin-top: -4px;
+    margin-top: -3px;
     padding: 20px;  
     margin-left: -14px;
     font-family: "Quicksand";
@@ -36,4 +36,3 @@
     color: #fff;
    
 }
-
