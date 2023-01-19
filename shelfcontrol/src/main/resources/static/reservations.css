@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+html {
+  background-color: #eef1f6;
+  overflow: hidden;
+}
+.reserved-books-container{
+    width: 125vh;
+    margin: 30px 80px;
+    background-color: #fff;
+    border: solid 1px #eef1f6;
+    border-radius: 12px;
+    padding: 24px;
+    height: fit-content;
+}
+.reserved-book-name{
+    color: #21303c;
+    font-size: 24px;
+}
+.book-card-container{
+    display: flex;
+    justify-content: space-between;
+    padding : 20px 20px;
+    margin-top: 10px;
+    background-color: #ECF3FF;
+    border-radius: 8px;
+
+}
+.book-ind{
+    display: flex;
+    justify-content: center;
+}
+.card-content{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.card-title{
+    font-size: 20px;
+    font-weight:400;
+    margin-bottom: 5px;
+}
+.card-author{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.buttons-container{
+    margin-top: 50px;
+}
+.remove-button-container{
+    text-align: center;
+    padding: 12px 28px;
+    margin: 10px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    background-color: #EC2E15;
+    color: #ECF3FF ;
+    border: none;
+    border-radius: 8px;
+    
+}
+.remove-button-container:hover{
+    background-color: #c62610;
+}
