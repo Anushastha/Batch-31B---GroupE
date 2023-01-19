@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/bookUpdate.css">
+    <link rel="stylesheet" href="/bookUpdate.css" />
     <title>Book Update</title>
   </head>
   <header>
@@ -35,14 +35,28 @@
                       <div class="isbn-container">
                         <label for="isbn">ISBN</label>
                         <br />
-                        <input type="text" name="isbn" id="isbn" placeholder= "${isbn}" value = "${isbn}" readonly />
+                        <input
+                          type="text"
+                          name="isbn"
+                          id="isbn"
+                          placeholder="${isbn}"
+                          value="${isbn}"
+                          readonly
+                        />
                       </div>
                     </div>
                     <div class="book-name">
                       <div class="book-name-container">
                         <label for="bookName">Book Name</label>
                         <br />
-                        <input type="text" name="book" id="bookName" placeholder = "${bookName}" value = "${bookName}" required />
+                        <input
+                          type="text"
+                          name="book"
+                          id="bookName"
+                          placeholder="${bookName}"
+                          value="${bookName}"
+                          required
+                        />
                       </div>
                     </div>
                     <div class="author-name">
@@ -65,7 +79,15 @@
                         <br />
                         <select name="category" id="category">
                           <option value="horror">Horror</option>
+                          <option value="classic">Classic</option>
+                          <option value="fiction">Fiction</option>
                           <option value="thriller">Thriller</option>
+                          <option value="fantasy">Fantasy</option>
+                          <option value="scifi">Science Fiction</option>
+                          <option value="action">Action & Adventure</option>
+                          <option value="mystery">Mystery</option>
+                          <option value="romance">Romance</option>
+                          <option value="shortstories">Short Story</option>
                         </select>
                       </div>
                     </div>
@@ -106,7 +128,15 @@
                       <div class="published-year-container">
                         <label for="publishedYear">Published Year</label>
                         <br />
-                        <input id = "publishedYear" name = "published-year" type="number" min="1900" max="2022" step="1" value="${publishedYear}" />
+                        <input
+                          id="publishedYear"
+                          name="published-year"
+                          type="number"
+                          min="1900"
+                          max="2022"
+                          step="1"
+                          value="${publishedYear}"
+                        />
                       </div>
                     </div>
                   </div>
@@ -116,18 +146,25 @@
                 <div class="form-bottom-container">
                   <div class="book-synopsis">
                     <div class="book-synopsis-container">
-                      <label class="synopsis-text" for="synopsis">Synopsis</label>
+                      <label class="synopsis-text" for="synopsis"
+                        >Synopsis</label
+                      >
                       <br />
-                      <textarea type="text" name="bookSynopsis" id="synopsis" placeholder="${synopsis}" required ></textarea>
-                      <script>
-                      </script>
+                      <textarea
+                        type="text"
+                        name="bookSynopsis"
+                        id="synopsis"
+                        placeholder="${synopsis}"
+                        required
+                      ></textarea>
+                      <script></script>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="update-button">
                 <div class="update-button-container">
-                  <button type="submit" id = "update-button">Update</button>
+                  <button type="submit" id="update-button">Update</button>
                 </div>
               </div>
             </form>
@@ -140,11 +177,10 @@
     var status = "${status}";
     var isbn = "${isbn}";
     console.log(status);
-    if(status == 1){
+    if (status == 1) {
       alert("Successfully Updated Book No: " + isbn);
-    }
-    else if(status == 0){
-      alert("Error")
+    } else if (status == 0) {
+      alert("Error");
     }
   </script>
 </html>

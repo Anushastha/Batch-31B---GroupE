@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/userTopBar.css" />
+  </head>
   <header>
     <div class="header">
       <div class="header-container">
@@ -27,6 +30,12 @@
                     <option value="classic">Classic</option>
                     <option value="fiction">Fiction</option>
                     <option value="thriller">Thriller</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="scifi">Science Fiction</option>
+                    <option value="action">Action & Adventure</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="romance">Romance</option>
+                    <option value="shortstories">Short Story</option>
                   </select>
                 </div>
               </div>

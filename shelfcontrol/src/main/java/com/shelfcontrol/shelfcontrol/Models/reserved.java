@@ -1,6 +1,6 @@
 package com.shelfcontrol.shelfcontrol.Models;
 
-import com.shelfcontrol.shelfcontrol.Methods.Date;
+import java.sql.Date;
 
 public class reserved{
     private Integer isbn;

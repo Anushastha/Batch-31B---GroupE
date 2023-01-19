@@ -31,7 +31,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                       <div class="book-img">
                         <img
                           id="book-icon"
-                          src="/images/books/${res.isbn}.png"
+                          src="/template/images/books/${res.isbn}.png"
                           alt=""
                           height="150px"
                         />

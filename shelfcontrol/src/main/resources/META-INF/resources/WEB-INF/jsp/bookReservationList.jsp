@@ -11,14 +11,14 @@ uri="http://java.sun.com/jsp/jstl/core" %>
     <title>User List</title>
   </head>
   <header>
-    <jsp:include page="userTopBar.jsp" />
+    <jsp:include page="adminTopBar.jsp" />
   </header>
   <body>
     <div class="body">
       <div class="body-contianer">
         <div class="navigation">
           <div class="navigation-contianer">
-            <jsp:include page="userNavBar.jsp" />
+            <jsp:include page="adminNavBar.jsp" />
           </div>
         </div>
       </div>

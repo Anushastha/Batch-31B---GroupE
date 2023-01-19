@@ -1,13 +1,16 @@
 package com.shelfcontrol.shelfcontrol.Models;
 
+import java.time.LocalDate;
 import java.util.Date;
+
+import com.shelfcontrol.shelfcontrol.Methods.date;
 
 public class borrowed {
     private Integer isbn;
     private String name;
     private Date borrowed;
     private Date duedate;
-    private Integer status;
+    private Long status;
 
     public Integer getIsbn() {
         return isbn;
@@ -41,12 +44,12 @@ public class borrowed {
         this.duedate = duedate;
     }
 
-    public Integer getStatus() {
+    public Long getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setStatus(LocalDate duDate) {
+        this.status = date.getStatus(duDate);
     }
 
     

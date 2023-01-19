@@ -139,12 +139,14 @@
       var emailContainer = document.getElementById("email-container");
       var email = document.getElementById("email");
       var matchEmail = document.getElementById("match-email");
-    
+      var registerButton = document.getElementById("register-button");
+
       function validation() {
         if (password.value != confirmPassword.value) {
           matchPassword.style.display = "initial";
           password.style.borderBottom = "solid 1px red";
           confirmPassword.style.borderBottom = "solid 1px red";
+          ValidateEmail(email);
         }
       }
       function ValidateEmail(mail) {
@@ -156,6 +158,9 @@
         matchEmail.style.display = "initial";
         return false;
       }
+
+      registerButton.addEventListener("click", validation);
+      registerButton.addEventListener("click", ValidateEmail);
     </script>
   </body>
 </html>

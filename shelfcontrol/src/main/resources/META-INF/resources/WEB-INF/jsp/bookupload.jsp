@@ -62,17 +62,16 @@
                         <label for="category">Category</label>
                         <br />
                         <select name="category" id="category">
-                          <option value="adventure">Adventure</option>
-                                  <option value="classics">Classics</option>
-                                  <option value="fantasy">Fantasy</option>
-                                  <option value="horror">Horror</option>
-                                  <option value="poetry">Poetry</option>
-                                  <option value="thriller">Thriller</option>
-                                  <option value="sciFic">Science Fiction</option>
-                                  <option value="selfHelp">Self Help</option>
-                                  <option value="essays">Essays</option>
-                                  <option value="nonFiction">Non Fiction</option>
-                                  <option value="other">Others</option>
+                          <option value="horror">Horror</option>
+                          <option value="classic">Classic</option>
+                          <option value="fiction">Fiction</option>
+                          <option value="thriller">Thriller</option>
+                          <option value="fantasy">Fantasy</option>
+                          <option value="scifi">Science Fiction</option>
+                          <option value="action">Action & Adventure</option>
+                          <option value="mystery">Mystery</option>
+                          <option value="romance">Romance</option>
+                          <option value="shortstories">Short Story</option>
                         </select>
                       </div>
                     </div>

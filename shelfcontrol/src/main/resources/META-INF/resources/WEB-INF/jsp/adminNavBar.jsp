@@ -36,6 +36,7 @@
             </div>
             <div class="line"></div>
             <div class="nav-hover">
+              <a href="/reservepage" style="text-decoration: none; color: #ffffff;">
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
@@ -54,13 +55,11 @@
               <div class="nav-hover">
                 <div id="logout" class="nav-item">
                   <div class="nav-icon">
-                    <img
-                      src="/template/images/icons/logout.png"
-                      alt="logout"
-                      height="30px"
-                    />
+                    <img src="/template/images/icons/logout.png" alt="logout" height="30px" />
                   </div>
-                  <div id="logout-text">Log Out</div>
+                  <form action="/logout">
+                      <button id="logout-text">Log Out</button>  
+                  </form>
                 </div>
               </div>
             </div>

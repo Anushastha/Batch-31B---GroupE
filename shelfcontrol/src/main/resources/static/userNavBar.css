@@ -1,0 +1,53 @@
+nav {
+  height: 100%;
+  margin: 0px;
+  border: solid px;
+  font-family: "Quicksand";
+  background-color: #eef1f6;
+  overflow-y: hidden;
+}
+.body-container {
+  display: flex;
+  justify-content: space-between;
+}
+.body {
+  display: flex;
+}
+.navigation-container {
+  width: 156px;
+  height: 100vh;
+  background-color: #21303c;
+  color: #fff;
+  text-align: center;
+}
+.nav-item {
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  padding-top: 10px;
+  transition-duration: 0.15s;
+  cursor: pointer;
+}
+.nav-hover:hover {
+  background-color: #53bdc7;
+}
+.line {
+  height: 1px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+#bottom {
+  margin-top: 14vh;
+}
+#logout {
+  display: flex;
+}
+#logout-text {
+  margin-top: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}

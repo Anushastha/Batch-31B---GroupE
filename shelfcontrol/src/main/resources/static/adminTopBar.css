@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+html {
+  background-color: #eef1f6;
+  overflow: hidden;
+}
+header {
+  background-color: #ffffff;
+  margin: 0;
+}
+.logo {
+  background-color: #21303c;
+  width: 156px;
+}
+#logo {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.search {
+  display: flex;
+}
+.header-container {
+  display: flex;
+}
+.form {
+  margin-top: 10px;
+}
+#genre {
+    margin-top: 20px;
+    font-size: 20px;
+    appearance: none;
+    padding: 6px 20px;
+    width: 150px;
+    text-align: left;
+    font-size: 14px;
+    color: #888b8b;
+    border: solid 1px #cbcdcd;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 15px;
+    background: url("https://cdn-icons-png.flaticon.com/512/7711/7711100.png")
+    no-repeat 115px;
+    background-size: 20px;
+    cursor: pointer;
+  }
+#genre:focus {
+  outline: none;
+}
+.search-bar-input {
+  padding: 10px 20px;
+  width: 450px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat 450px;
+  background-size: 20px;
+}
+input:focus {
+  outline: none;
+}
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.bell-icon {
+  margin: 22px;
+  font-size: 25px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 5px;
+  background-color: #fafcff;
+}
+.bell-icon:hover {
+  transform: rotate(0.04turn);
+}
+@keyframes bell {
+  0% {
+    transform: rotate(-0.08turn);
+  }
+  50% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(0.08turn);
+  }
+}
+.account-container {
+  display: flex;
+  margin: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  background-color: #fafcff;
+  color: #888b8b;
+  border-bottom: solid 1px #ffffff;
+  border-radius: 8px;
+}
+.account-container:hover {
+  color: #21303ccf;
+  background-color: #fafafa;
+}
+
+#profile-icon {
+  background-color: #c9f2c8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+.profile-picture {
+  margin: 10px 10px;
+}
+.profile-info {
+  padding: 10px 10px;
+  line-height: 20px;
+  text-align: start;
+}
+.profile-name {
+  font-size: 16px;
+}
+.profile-type {
+  font-size: 12px;
+}
