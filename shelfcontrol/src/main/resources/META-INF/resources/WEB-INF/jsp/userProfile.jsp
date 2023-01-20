@@ -100,14 +100,13 @@
   </body>
   <script>
     function red(){
-    //var status = "${status}";
+    var username = document.getElementById("username");
     var email = document.getElementById("Email")
-    var passOne = document.getElementsById("passOne");
-    var session = data = '@Session["passOne"]';
-    if(session==passOne){
+    var passOne = document.getElementById("passOne");
+    var passTwo = document.getElementById("passTwo");
+    var password = "<%out.print(password);%>";
+    if(passOne==password){
       passOne.style.borderBottom = "solid 1px green"
-    }else{
-      passOne.style.borderBottom = "solid 1px red"
     }
   }
   

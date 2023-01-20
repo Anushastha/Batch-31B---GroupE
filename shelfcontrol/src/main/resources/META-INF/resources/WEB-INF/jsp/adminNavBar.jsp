@@ -23,8 +23,8 @@
             </div>
             <div class="line"></div>
             <div class="nav-hover">
-              <a href="userList">
-              <div class="nav-item">
+              <a href="/users" style="text-decoration: none; color: #ffffff;">              
+                <div class="nav-item">
                 <div class="nav-icon">
                   <img
                     src="/template/images/icons/users.png"

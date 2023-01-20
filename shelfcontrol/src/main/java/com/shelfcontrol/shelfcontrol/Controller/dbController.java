@@ -588,5 +588,26 @@ public class dbController {
         System.out.println(status);
         return status;
     }
+    List<Users> userData() throws SQLException{
+        ResultSet result = null;
+        List<Users> users = new ArrayList<>();
+        try {
+            String query = "select * from Users where AccountType = ?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1,"Student");
+            result = database.retrieve(ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        while (result.next()) {
+            Users userList = new Users();
+            userList.setUserId(result.getInt("UserId"));
+            userList.setUserName(result.getString("UserName"));
+            userList.setSubscribed(result.getInt("Subscribed"));
+            userList.setBookRead(result.getInt("BooksRead"));
+            users.add(userList);
+        }
+        return users;
+    }
 }
 

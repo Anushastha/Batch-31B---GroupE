@@ -103,10 +103,7 @@ public class mainController {
         session.invalidate();
         return "login";
     }
-    @GetMapping({"/userList"})
-    public String getuserList(){
-        return "userList";
-    }
+
 
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException {
@@ -475,5 +472,13 @@ public class mainController {
         System.out.println(result);
         model.addAttribute("result", result);
         return "bookReservationList";
+    }
+    @GetMapping("/users")
+    public String User(Model model) throws SQLException {
+        dbController controller = new dbController();
+        List<Users> result = new ArrayList<>();
+        result = controller.userData();
+        model.addAttribute("result", result);
+        return ("userList");
     }
 }
