@@ -3,7 +3,7 @@ package com.shelfcontrol.shelfcontrol.Models;
 import java.time.LocalDate;
 import java.util.Date;
 
-import com.shelfcontrol.shelfcontrol.Methods.date;
+import com.shelfcontrol.shelfcontrol.Methods.dates;
 
 public class borrowed {
     private Integer isbn;
@@ -49,7 +49,7 @@ public class borrowed {
     }
 
     public void setStatus(LocalDate duDate) {
-        this.status = date.getStatus(duDate);
+        this.status = dates.getStatus(duDate);
     }
 
     

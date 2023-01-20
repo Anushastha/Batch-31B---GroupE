@@ -5,7 +5,7 @@ import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 
 
-public class date{
+public class dates{
     
     public static LocalDate getDate(){
         LocalDate date = LocalDate.now();

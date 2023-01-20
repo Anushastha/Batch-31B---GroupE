@@ -10,7 +10,7 @@ import java.util.List;
 import org.apache.catalina.User;
 
 import com.shelfcontrol.shelfcontrol.Database.db;
-import com.shelfcontrol.shelfcontrol.Methods.date;
+import com.shelfcontrol.shelfcontrol.Methods.dates;
 import com.shelfcontrol.shelfcontrol.Models.Books;
 import com.shelfcontrol.shelfcontrol.Models.Users;
 import com.shelfcontrol.shelfcontrol.Models.borrowed;
@@ -449,8 +449,8 @@ public class dbController {
             ps = database.connection.prepareStatement(query);
             ps.setInt(1, isbn);
             ps.setInt(2, userID);
-            ps.setDate(3, java.sql.Date.valueOf(date.getDate()));
-            ps.setDate(4, java.sql.Date.valueOf(date.getDueDate()));
+            ps.setDate(3, java.sql.Date.valueOf(dates.getDate()));
+            ps.setDate(4, java.sql.Date.valueOf(dates.getDueDate()));
             status = database.manipulate(ps);
             updateCopies(isbn, "-");
             addReadBooks(userID);
@@ -492,7 +492,7 @@ public class dbController {
             ps = database.connection.prepareStatement(query);
             ps.setInt(1, userID);
             ps.setInt(2, isbn);
-            ps.setDate(3, java.sql.Date.valueOf(date.getDate()));
+            ps.setDate(3, java.sql.Date.valueOf(dates.getDate()));
             status = database.manipulate(ps);
         } catch (SQLException e) {
             e.printStackTrace();
