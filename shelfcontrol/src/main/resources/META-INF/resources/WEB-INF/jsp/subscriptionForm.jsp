@@ -71,6 +71,14 @@
       </div> 
 </body>
   <script>
+    var status = '${status}';
+    var name = document.getElementById("name");
+    var emailAddress = document.getElementById("emailAddress");
+    var paydate = document.getElementById("paydate");
+    var months = document.getElementById("months");
+    var method = document.getElementById("method");
+    var total = document.getElementById("total");
+
     function calculateAmount(val) {
       var tot_price = val * 1000;
       /*display the result*/
@@ -79,13 +87,6 @@
     }
 
     function paydone(){
-    var status = '${status}';
-    var name = document.getElementById("name");
-    var emailAddress = document.getElementById("emailAddress");
-    var paydate = document.getElementById("paydate");
-    var months = document.getElementById("months");
-    var method = document.getElementById("method");
-
     if(status==0){
       name.style.borderBottom = "solid 1px red"
       emailAddress.style.borderBottom = "solid 1px red"

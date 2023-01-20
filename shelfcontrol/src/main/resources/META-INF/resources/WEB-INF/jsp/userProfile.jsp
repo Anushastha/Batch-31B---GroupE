@@ -69,14 +69,20 @@
                   <div id="email">| Email</div>
                 </div>
               </div>
-              <div id="password">Password Management
+              <div class="password">
+                <label for="password" class="passTitle">Password Management</label>
                 <div class="passwordOne">
-                  <input type="password" maxlength="10" name="passOne" id="passOne">
-                  <div id="old-pass">| Old Password</div>
+                  <input type="password" maxlength="10" name="passOne" id="passOne" placeholder="Old Password" onchange="red()">
+                </div>
+                <div id="match-pass" class="match-pass">
+                  * Password Incorrect.
                 </div>
                 <div class="passwordTwo">
-                  <input type="password" maxlength="10" name="passTwo" id="passTwo">
-                  <div id="new-pass">| New Password</div>
+                  <input type="password" maxlength="10" name="passTwo" id="passTwo" placeholder="New Password">
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" name="checkbox" id="checkbox"onclick="showpass()">
+                  <label for="checkbox_id" id="text">Show password</label>
                 </div>
               </div>
               <div id="match-pass" class="match-pass">
@@ -93,6 +99,7 @@
     </div>
   </body>
   <script>
+    function red(){
     //var status = "${status}";
     var email = document.getElementById("Email")
     var passOne = document.getElementsById("passOne");
@@ -102,5 +109,16 @@
     }else{
       passOne.style.borderBottom = "solid 1px red"
     }
+  }
+  
+    function showpass() {
+      if (passTwo.type === "password" || passOne.type === "password" ) {
+        passTwo.type = "text";
+        passOne.type = "text";
+      } else {
+        passTwo.type = "password";
+        passOne.type = "password";
+      }
+      }
   </script>
 </html>

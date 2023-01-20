@@ -278,9 +278,13 @@ input:focus {
     background-color: white;
     font-size: 16px;
 }
-#password{
+.password{
   position: relative;
   top: 40px;
+  width: 360px;
+  height: 150px;
+}
+.passTitle{
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 500;
@@ -288,7 +292,372 @@ input:focus {
   line-height: 22px;
   color: #888b8b;
 }
-.passwordOne input[type=password]{
+.passwordOne{
+  height: 23px;
+  width: 350px;
+  position: relative;
+  top: 10px;
+  font-size: 16px;
+}
+.match-pass{
+  position: absolute;
+  top: 60px;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.passwordTwo{
+  height: 23px;
+  width: 350px;
+  position: relative;
+  top: 35px;
+  font-size: 16px;
+}
+.checkbox{
+  position: relative;
+  top: 50px;
+}
+#checkbox{
+  cursor: pointer;
+}
+#text{
+  color: #888b8b;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+#passOne,#passTwo{
+  position: relative;
+  height: 23px;
+  width: 350px;
+  border:solid #888b8b;
+  border-width: thin; 
+  border-radius: 6px;
+  font-size: 16px;
+}
+/* i{ 
+  position: relative;
+  left: 320px;
+  bottom: 25px;
+  color: #888b8b;
+  cursor: pointer;
+} */
+.change-btn-area{
+  position: relative;
+  top: 55px;
+}
+#change-btn{
+  position: relative;
+  left: 255px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  width: 100px;
+  height: 35px;
+  color: white;
+  background-color: #21303c;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#change-btn:hover{
+  background-color:#888b8b;
+  color: white;
+}
+#profile-name-icon {
+  text-align: center;
+  padding-top: 45px;
+  cursor: default;
+}
+.theme-container{
+  position: relative;
+  height: 90px;
+  top: 30px;
+}
+#tname {
+  padding-top: 10px;
+  width: 150px;
+  text-align: center;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+  position: relative;
+  left: 90px;
+  cursor: default;
+}
+#theme{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  color: #888b8b;
+}
+.theme-selector{
+  position: relative;
+  top: 15px;
+  right: 10px;
+  margin-left: 125px;
+  cursor: pointer;
+}
+.delete-btn-area{
+  position: relative;
+  height: 40px;
+  top: 15px;
+}
+#delete-btn{
+  position: relative;
+  margin-top: 8px;
+  left: 115px;
+  width: 100px;
+  height: 25px;
+  color: #888b8b;
+  border:solid #888b8b;
+  border-width: thin; 
+  border-radius: 6px;
+  background-color: white;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-size: 12px;
+  font-weight:500;
+  cursor: pointer;
+}
+#delete-btn:hover{
+  background-color:#888b8b;
+  color: white;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
+* {
+  margin: 0;
+  font-family: "Quicksand";
+}
+html {
+  background-color: #eef1f6;
+  overflow: scroll;
+}
+header {
+  background-color: #ffffff;
+  margin: 0;
+}
+.logo {
+  background-color: #21303c;
+  width: 156px;
+}
+#logo {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+.search {
+  display: flex;
+}
+.header-container {
+  display: flex;
+}
+.form {
+  margin-top: 10px;
+}
+#genre {
+  margin-top: 20px;
+  font-size: 20px;
+  appearance: none;
+  padding: 6px 20px;
+  width: 150px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background: url("https://cdn-icons-png.flaticon.com/512/7711/7711100.png")
+    no-repeat 115px;
+  background-size: 20px;
+  cursor: pointer;
+}
+#genre:focus {
+  outline: none;
+}
+.search-bar-input {
+  padding: 10px 20px;
+  width: 450px;
+  text-align: left;
+  font-size: 14px;
+  color: #888b8b;
+  border: solid 1px #cbcdcd;
+  border-radius: 8px;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat 450px;
+  background-size: 20px;
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+}
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.bell-icon {
+  margin: 22px;
+  font-size: 25px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 5px;
+  background-color: #fafcff;
+}
+.bell-icon:hover {
+  transform: rotate(0.04turn);
+}
+@keyframes bell {
+  0% {
+    transform: rotate(-0.08turn);
+  }
+  50% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(0.08turn);
+  }
+}
+.account-container {
+  display: flex;
+  margin: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  background-color: #fafcff;
+  color: #888b8b;
+  border-bottom: solid 1px #ffffff;
+  border-radius: 8px;
+}
+.account-container:hover {
+  color:black;
+  background-color: #fafafa;
+}
+#profile-icon {
+  background-color: #c9f2c8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+.profile-picture {
+  margin: 10px 10px;
+}
+.profile-info {
+  padding: 10px 10px;
+  line-height: 20px;
+  text-align: start;
+}
+.profile-name {
+  font-size: 16px;
+}
+.profile-type {
+  font-size: 12px;
+}
+.body {
+  display: flex;
+}
+.navigation-container {
+  width: 156px;
+  height: 110vh;
+  background-color: #21303c;
+  color: #fff;
+  text-align: center;
+}
+.nav-item {
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  padding-top: 10px;
+  transition-duration: 0.15s;
+  cursor: pointer;
+}
+.nav-hover:hover {
+  background-color: #53bdc7;
+}
+.line {
+  height: 1px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+#bottom {
+  margin-top: 14vh;
+}
+#logout {
+  display: flex;
+}
+#logout-text {
+  margin-top: 5px;
+}
+.body-contianer {
+  display: flex;
+}
+.user-page-container {
+  width: 135vh;
+  height: fit-content;
+  margin: 20px 80px;
+  background-color: #fff;
+  border: solid 1px #eef1f6;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 40px;
+}
+.user-page-left-container {
+  width: 340px;
+  height: 72vh;
+}
+.profile-container {
+  background-color: #c9f2c8;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 50px;
+  color: #888b8b;
+  position: relative;
+  top: 30px;
+  left: 85px;
+  margin: 10px 10px;
+}
+.divide-line {
+  height: 66vh;
+  width: 1.5px;
+  background-color: #21303c;
+  position: relative;
+  top: 20px;
+  right: 60px;
+}
+.user-page-right-container {
+  height: 60vh;
+  width: 360px;  
+  position: relative;
+  top: 35px;
+  right: 100px;
+}
+#personal-info{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+}
+.personal-container input[type=text] {
     height: 23px;
     width: 350px;
     position: relative;
@@ -299,30 +668,118 @@ input:focus {
     background-color: white;
     font-size: 16px;
 }
-.passwordTwo input[type=password]{
-  height: 23px;
-  width: 350px;
-  position: relative;
-  top: 10px;
-  border:solid #888b8b;
-  border-width: thin; 
-  border-radius: 6px;
-  background-color: white;
-  font-size: 16px;
-}
-#old-pass,#new-pass{
+#name{
   font-family: 'Quicksand';
   font-style: normal;
   font-size: small;
   position: relative;
   text-align: right;
   bottom: 15px;
-  right: 10px;
+  right: 8px;
   z-index: 10;
+}
+#contact{
+  position: relative;
+  top: 20px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+}
+#email{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-size: small;
+  position: relative;
+  text-align: right;
+  bottom: 15px;
+  right: 8px;
+  z-index: 10;
+}
+.contact-container input[type=text]{
+    height: 23px;
+    width: 350px;
+    position: relative;
+    top: 10px;
+    border:solid #888b8b;
+    border-width: thin; 
+    border-radius: 6px;
+    background-color: white;
+    font-size: 16px;
+}
+.password{
+  position: relative;
+  top: 40px;
+  width: 360px;
+  height: 150px;
+}
+.passTitle{
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #888b8b;
+}
+.passwordOne{
+  height: 23px;
+  width: 350px;
+  position: relative;
+  top: 10px;
+  font-size: 16px;
+}
+.match-pass{
+  position: absolute;
+  top: 60px;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.passwordTwo{
+  height: 23px;
+  width: 350px;
+  position: relative;
+  top: 35px;
+  font-size: 16px;
+}
+.checkbox{
+  position: relative;
+  top: 50px;
+}
+#checkbox{
+  cursor: pointer;
+}
+#text{
+  color: #888b8b;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+#passOne,#passTwo{
+  position: relative;
+  height: 23px;
+  width: 350px;
+  border:solid #888b8b;
+  border-width: thin; 
+  border-radius: 6px;
+  font-size: 16px;
+}
+/* i{ 
+  position: relative;
+  left: 320px;
+  bottom: 25px;
+  color: #888b8b;
+  cursor: pointer;
+} */
+.change-btn-area{
+  position: relative;
+  top: 55px;
 }
 #change-btn{
   position: relative;
-  top: 70px;
   left: 255px;
   margin-bottom: 10px;
   border-radius: 6px;

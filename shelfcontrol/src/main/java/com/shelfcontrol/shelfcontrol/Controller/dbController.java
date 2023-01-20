@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.catalina.User;
-
+import org.springframework.core.ReactiveAdapter;
+import com.mysql.cj.Session;
 import com.shelfcontrol.shelfcontrol.Database.db;
 import com.shelfcontrol.shelfcontrol.Methods.dates;
 import com.shelfcontrol.shelfcontrol.Models.Books;
@@ -259,30 +260,40 @@ public class dbController {
         return (resultSet);
     }
 
-    public int profileUpdate(Users users) throws SQLException {
-        try {
-            String query = "update Users set UserName = ?, Password = ?";
-            ps = database.connection.prepareStatement(query);
-            ps.setString(1, users.getUsername());
-            ps.setString(2, users.getNewPassword());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return database.manipulate(ps);
-    }
-
-    public String getPass(String email) throws SQLException {
+    public String getPass(String email) throws SQLException{
         String password = "";
         String query = "select Password from Users where Email=?";
         ps = database.connection.prepareStatement(query);
-        ps.setString(1, password);
+        ps.setString(1,password);
         ResultSet result = database.retrieve(ps);
-        while (result.next()) {
+        while(result.next()){
             password = result.getString("Password");
         }
         return password;
     }
 
+    public int profileUpdate(Users users, String sessionEmail)throws SQLException{   
+        try{
+            if(users.getPassword().strip().equals("")){
+            String query = "update Users set UserName=? where Email=?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, users.getUsername());
+            ps.setString(2, sessionEmail);
+            }
+            else{
+            String query = "update Users set UserName=?, Password=? where Email=?";
+            ps = database.connection.prepareStatement(query);
+            ps.setString(1, users.getUsername());
+            ps.setString(2, users.getNewPassword());
+            ps.setString(3, sessionEmail);
+            }
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return database.manipulate(ps);
+    }
+    
     public ResultSet getAccType(String email) {
         ResultSet resultSet = null;
         try {

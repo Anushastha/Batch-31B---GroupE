@@ -103,6 +103,10 @@ public class mainController {
         session.invalidate();
         return "login";
     }
+    @GetMapping({"/userList"})
+    public String getuserList(){
+        return "userList";
+    }
 
     @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException {
@@ -306,47 +310,51 @@ public class mainController {
     }
 
     @GetMapping("/userInfo")
-    public String updateInfo(HttpServletRequest request, Model model) throws SQLException {
+    public String updateInfo(HttpServletRequest request, Model model)throws SQLException{
+        HttpSession session = request.getSession();
+        String sessionEmail = String.valueOf(session.getAttribute("email"));
         String username = request.getParameter("username");
         String email = request.getParameter("Email");
         String password = request.getParameter("passOne");
         String newPassword = request.getParameter("passTwo");
         dbController controller = new dbController();
         Users users = new Users(username, email, password, newPassword);
-        if (controller.profileUpdate(users) == 1) {
-            model.addAttribute("status", 1);
-        } else {
-            model.addAttribute("status", 0);
+
+        if(controller.profileUpdate(users, sessionEmail)==1){
+            model.addAttribute("status",1);
+            session.setAttribute("user", username);
+            session.setAttribute("password", newPassword);
+    }
+        else{
+            model.addAttribute("status",0);
         }
         return ("userProfile");
     }
 
     @GetMapping("/getEmail")
-    public String getEmail(HttpServletRequest request, Model model) {
+    public String getEmail(HttpServletRequest request, Model model){
         String email = request.getParameter("emailAddress");
         dbController controller = new dbController();
         ResultSet resultSet = controller.getAccType(email);
         try {
-            while (resultSet.next()) {
+            while(resultSet.next()){
                 model.addAttribute("emailAddress", resultSet.getString("Email"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        model.addAttribute("emailAddress", email);
+        model.addAttribute("emailAddress", email );
         model.addAttribute("status", 1);
-        return ("subscriptionForm");
+        return("subscriptionForm");
     }
-
     @GetMapping("/updateType")
-    public String updateType(HttpServletRequest request, Model model) throws SQLException {
+    public String updateType(HttpServletRequest request, Model model) throws SQLException{
         String email = request.getParameter("emailAddress");
         int months = Integer.parseInt(request.getParameter("months"));
         dbController controller = new dbController();
         Users user = new Users(email);
-        if (controller.typeUpdate(user) == 1) {
-            model.addAttribute("status", 1);
-            ;
+        if(controller.typeUpdate(user) == 1){
+            model.addAttribute("status", 1);;
             model.addAttribute("months", months);
             return "bookupload";
         } else {

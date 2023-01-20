@@ -23,6 +23,7 @@
             </div>
             <div class="line"></div>
             <div class="nav-hover">
+              <a href="userList">
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
@@ -33,6 +34,7 @@
                 </div>
                 Users
               </div>
+            </a>
             </div>
             <div class="line"></div>
             <div class="nav-hover">
