@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+    <style>
+       body{
+        overflow: hidden;
+       }
+        
+        section{
+            width: 1200px;
+            height: 650px;
+            background-size: cover;
+            position: relative;
+            margin-left: 150px;
+           
+
+        }
+        .container{
+            padding:10px;
+            margin-left: -10px;
+            
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: 50px;
+            height: 650px;
+            background-color: rgba(238, 255, 49, 0.4);
+            pointer-events: none;
+            display: none;
+        
+        }
+        .box{
+            color: blue;
+        }
+        .read{
+            border: 1px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            border-radius: 8px;
+        }
+        .readimg img{
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            margin-left: 17px;
+            margin-top: 2px;
+        }
+        .read input{
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 30px;
+            border-radius: 5px;
+        }
+        embed{
+            border-radius: 20px;
+            box-shadow:0 0 10px rgba(0, 0, 0, 0.4);
+    
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <section>
+    <div class="container">
+        <embed src="files/Sri-Aurobindo-The-Mother.pdf" type="application/pdf" width="1200px" height="690px">
+    </div>
+    
+        <div class="overlay" ></div>
+    </section>
+    <div class="read">
+        <div class="readimg">
+    <img src="images/eye.png" alt=""></div>
+    <input type="button" value="On" id="onoff" onclick="onoff();">
+</div>
+    
+<script type="text/javascript">
+    function onoff(){
+      currentvalue = document.getElementById('onoff').value;
+      if(currentvalue == "Off"){
+        document.getElementById("onoff").value="On";
+        document.querySelector('.overlay').style.display='none';
+      }else{
+        document.getElementById("onoff").value="Off";
+        document.querySelector('.overlay').style.display='block';
+      }
+    }
+    </script>
+    
+   
+    
+    
+    
+</body>
+</html>
