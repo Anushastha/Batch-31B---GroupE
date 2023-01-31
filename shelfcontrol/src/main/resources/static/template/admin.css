@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@700&family=Oswald:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&family=Source+Sans+Pro:wght@200&display=swap");
 *{  margin: 0;
   font-family: "Quicksand";
+  
 }
 html {
   background-color: #eef1f6;
@@ -9,10 +10,14 @@ html {
 header {
   background-color: #ffffff;
   margin: 0;
+  overflow: hidden;
+  
+  
 }
 .logo {
   background-color: #21303c;
   width: 156px;
+  
 }
 #logo {
   margin-left: 25px;
@@ -20,6 +25,7 @@ header {
 }
 .search {
   display: flex;
+  
 }
 .header-container {
   display: flex;
@@ -72,6 +78,7 @@ input:focus {
   display: flex;
   margin-left: auto;
   margin-right: 20px;
+  overflow: hidden;
 }
 
 .bell-icon {
@@ -141,7 +148,7 @@ body {
   border: solid px;
   font-family: "Quicksand";
   background-color: #eef1f6;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .body-container {
   display: flex;
@@ -149,6 +156,7 @@ body {
 }
 .body {
   display: flex;
+  overflow: hidden;
 }
 .navigation-container {
   width: 156px;
@@ -253,10 +261,11 @@ body {
 .content{
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 
 }
 .booklist {
-    position: fixed;
+    position: absolute;
     width: 1250px;
     margin-left:60px ;
     margin-top: 30px;
@@ -264,6 +273,7 @@ body {
     background: #fff;
     border-radius: 12px;
     overflow-x: auto;
+    overflow-y: hidden;
    
 
 }
@@ -275,7 +285,7 @@ body {
     position: relative;
     margin-left: 10px;
     margin-top: 0px;
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: #136284;
 }
 .cardBox {
@@ -286,23 +296,25 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 60px;
+   
 }
 
 .cardBox .card {
     position: relative;
-    width: 120px;
-    height: 200px;
+    width: 110px;
+    height: 210px;
     background: #136284;
     align-items: center;
     padding: 35px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
 }
 
 .cardBox .card img {
     position: relative;
     margin-left: -34px;
     margin-top: -36px;
-    width: 190px;
+    width: 180px;
     height: 220px;
     cursor: pointer;
 }
@@ -370,7 +382,7 @@ body {
     outline-color: 2px black;
 }
 .dataBox {
-    position: fixed;
+    position: absolute;
     width: calc(100% - 400px);
     left: 200px;
     margin-top: 260px;
@@ -415,7 +427,7 @@ body {
 
 
 .borrowed-books-container {
-  position: relative;
+  position: absolute;
   width: 1200px;
   margin-top: 380px;
   margin-left: 60px;
