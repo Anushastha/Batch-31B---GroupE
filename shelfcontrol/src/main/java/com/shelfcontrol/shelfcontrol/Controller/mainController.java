@@ -1,28 +1,23 @@
 package com.shelfcontrol.shelfcontrol.Controller;
 
+import com.shelfcontrol.shelfcontrol.Methods.Method;
+import com.shelfcontrol.shelfcontrol.Methods.storeImage;
+import com.shelfcontrol.shelfcontrol.Models.Books;
+import com.shelfcontrol.shelfcontrol.Models.Users;
+import com.shelfcontrol.shelfcontrol.Models.search;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
-import org.apache.catalina.User;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
-import com.shelfcontrol.shelfcontrol.Methods.Method;
-import com.shelfcontrol.shelfcontrol.Methods.storeImage;
-import com.shelfcontrol.shelfcontrol.Models.Books;
-import com.shelfcontrol.shelfcontrol.Models.Users;
-import com.shelfcontrol.shelfcontrol.Models.search;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -45,6 +40,10 @@ public class mainController {
     @GetMapping({ "/resetPassword" })
     public String getForgotPassword() {
         return "resetPassword";
+    }
+    @GetMapping({"/adminDash"})
+    public String getadminDash(){
+        return "adminDash";
     }
 
     @GetMapping({ "/bookupload" })
