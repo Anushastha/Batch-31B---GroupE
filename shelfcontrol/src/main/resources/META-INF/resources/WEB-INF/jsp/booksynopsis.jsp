@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ page import="java.util.*" %> <%@ page
+import="com.shelfcontrol.shelfcontrol.Models.search" %> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,7 +34,8 @@
           <div class="image-container">
             <div class="image">
               <img
-                src="images/books/${isbn}.png"
+              src= <c:out value="/template/images/books/$isbn.png"/>
+              value="/images/books/${res.isbn}.png"
                 alt="image"
                 width="200px"
                 height="270px"

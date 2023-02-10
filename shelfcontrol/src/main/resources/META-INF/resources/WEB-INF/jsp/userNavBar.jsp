@@ -45,7 +45,7 @@
         </div>
         <div class="line"></div>
         <div class="nav-hover">
-          <a href="subscription" style="text-decoration: none;">
+          <a href="subscription" style="text-decoration: none; color: #ffffff;">
           <div class="nav-item">
             <div class="nav-icon">
               <img

@@ -210,11 +210,11 @@ input:focus {
   padding-top: 8px;
 }
 .Book-Id{
-  width: 68px;
+  width: 58px;
   text-align: center;
 }
 .Book-Name{
-  width: 100px;
+  width: 180px;
   text-align: center;
 }
 .Borrowed-Date, .Due-Date{

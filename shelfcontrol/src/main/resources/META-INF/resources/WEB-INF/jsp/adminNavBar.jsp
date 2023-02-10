@@ -10,6 +10,7 @@
           <div class="navigation-container">
             <div class="line"></div>
             <div class="nav-hover">
+              <a href="/bookupload" style="text-decoration: none; color: #ffffff;">
               <div class="nav-item">
                 <div class="nav-icon">
                   <img
@@ -20,6 +21,7 @@
                 </div>
                 Add Books
               </div>
+            </a>
             </div>
             <div class="line"></div>
             <div class="nav-hover">

@@ -182,7 +182,7 @@ public class mainController {
                     synopsis);
             try {
                 if (controller.addBooks(books) == 1) {
-                    return ("dashboard");
+                    return ("adminDash");
                 } else {
                     return ("bookupload");
                 }
