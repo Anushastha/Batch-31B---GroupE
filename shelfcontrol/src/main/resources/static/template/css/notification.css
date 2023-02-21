@@ -68,4 +68,70 @@ header {
   input:focus {
     outline: none;
   }
+  .nav-right {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+  }
   
+  .bell-icon {
+    margin: 22px;
+    font-size: 25px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding: 5px;
+    background-color: #fafcff;
+  }
+  .bell-icon:hover {
+    transform: rotate(0.04turn);
+  }
+  @keyframes bell {
+    0% {
+      transform: rotate(-0.08turn);
+    }
+    50% {
+      transform: rotate(0turn);
+    }
+    100% {
+      transform: rotate(0.08turn);
+    }
+  }
+  .account-container {
+    display: flex;
+    margin: 8px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: #fafcff;
+    color: #888b8b;
+    border-bottom: solid 1px #ffffff;
+    border-radius: 8px;
+  }
+  .account-container:hover {
+    color: #21303ccf;
+    background-color: #fafafa;
+  }
+  
+  #profile-icon {
+    background-color: #c9f2c8;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+  }
+  .profile-picture {
+    margin: 10px 10px;
+  }
+  .profile-info {
+    padding: 10px 10px;
+    line-height: 20px;
+    text-align: start;
+  }
+  .profile-name {
+    font-size: 16px;
+  }
+  .profile-type {
+    font-size: 12px;
+  }
