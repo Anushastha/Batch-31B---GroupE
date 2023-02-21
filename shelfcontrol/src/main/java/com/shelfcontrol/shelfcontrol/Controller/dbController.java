@@ -624,5 +624,23 @@ public ResultSet getUserNotification(){
     }
     return(resultSet);
 }
+public int notification(String message, Integer senderID, Integer recieverID){
+    Integer status = 0;
+    try{
+        String query = "INSERT into notification_table(notification_date,notification_time,notification_receiver_id,notification_sender_id, message) VALUES (?,?,?,?,?) ";
+        ps = database.connection.prepareStatement(query);
+        ps.setDate(1, java.sql.Date.valueOf(dates.getDate()));
+        ps.setString(2, "1234");
+        ps.setInt(3, recieverID);
+        ps.setInt(4, senderID);
+        ps.setString(5, message);
+        status = database.manipulate(ps);
+    }
+    catch(Exception e){
+        e.printStackTrace();
+    }
+    return status;
 }
+}
+
 
