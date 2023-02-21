@@ -28,3 +28,44 @@ header {
 .form {
   margin-top: 10px;
 }
+#genre {
+    margin-top: 20px;
+    font-size: 20px;
+    appearance: none;
+    padding: 6px 20px;
+    width: 150px;
+    text-align: left;
+    font-size: 14px;
+    color: #888b8b;
+    border: solid 1px #cbcdcd;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 15px;
+    background: url("https://cdn-icons-png.flaticon.com/512/7711/7711100.png")
+      no-repeat 115px;
+    background-size: 20px;
+    cursor: pointer;
+  }
+  #genre:focus {
+    outline: none;
+  }
+  .search-bar-input {
+    padding: 10px 20px;
+    width: 450px;
+    text-align: left;
+    font-size: 14px;
+    color: #888b8b;
+    border: solid 1px #cbcdcd;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: url("https://static.thenounproject.com/png/101791-200.png")
+      no-repeat 450px;
+    background-size: 20px;
+  }
+  input:focus {
+    outline: none;
+  }
+  
