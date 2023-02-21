@@ -135,3 +135,67 @@ header {
   .profile-type {
     font-size: 12px;
   }
+  .body {
+    display: flex;
+  }
+  .navigation-container {
+    width: 156px;
+    height: 100vh;
+    background-color: #21303c;
+    color: #fff;
+    text-align: center;
+  }
+  .nav-item {
+    width: fit-content;
+    padding: 20px;
+    margin: auto;
+    padding-top: 10px;
+    transition-duration: 0.15s;
+    cursor: pointer;
+  }
+  .nav-hover:hover {
+    background-color: #53bdc7;
+  }
+  .line {
+    height: 1px;
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+  }
+  #bottom {
+    margin-top: 14vh;
+  }
+  #logout {
+    display: flex;
+  }
+  #logout-text {
+    margin-top: 5px;
+  }
+  body {
+    height: 100%;
+    margin: 0px;
+    border: solid px;
+    font-family: "Quicksand";
+    background-color: #eef1f6;
+    overflow-y: hidden;
+  }
+  .body-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .books-container {
+    background-color: white;
+    height: 325px;
+    position: relative;
+    left: 8%;
+    margin-top: 40px;
+    border-radius: 12px;
+  }
+  .books-title,
+  .user-list-title {
+    font-size: 22px;
+    padding-left: 48px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    color: #136284;
+  }
