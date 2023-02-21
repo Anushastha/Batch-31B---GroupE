@@ -609,5 +609,20 @@ public class dbController {
         }
         return users;
     }
+
+public ResultSet getUserNotification(){
+    ResultSet resultSet = null;
+    try{
+        String query = "select * from notification_table where notification_receiver_id = ?";
+        ps = database.connection.prepareStatement(query);
+        ps.setString(1, "id");
+        resultSet = database.retrieve(ps);
+        System.out.println(resultSet);
+    }
+    catch (SQLException e){
+        e.printStackTrace();
+    }
+    return(resultSet);
+}
 }
 
