@@ -480,4 +480,14 @@ public class mainController {
         model.addAttribute("result", result);
         return ("userList");
     }
+    @GetMapping("notification")
+    public String notfication(HttpServletRequest request, Model model){
+        dbController controller = new dbController();
+        String message = request.getParameter("message");
+        HttpSession session = request.getSession();
+        Integer senderID = Integer.parseInt(String.valueOf(session.getAttribute("userID")));
+        Integer recieverID = Integer.parseInt(request.getParameter("reciever"));
+        controller.notification(message,senderID, recieverID);
+        return "Notification";
+    }
 }
