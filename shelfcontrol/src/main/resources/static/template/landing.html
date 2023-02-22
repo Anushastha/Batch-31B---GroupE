@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="landing.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="content">
+        <div class="contents">
             <h1>SHELF CONTROL</h1>
             <p>Platform that brings together people willing to learn. It helps us in learning and expanding our knowledge.<br> develop our reading habits from a library and satisfy our thirst and curiosity for knowledge. This helps in the personal growth
                 of a person and development.</p>
@@ -29,9 +30,67 @@
             <div>
                 <button type="button"><span></span> Login</button>
                 <button type="button"><span></span> Register</button>
+                <button class="share" onclick="toggle()"><span></span>Share</button>
             </div>
         </div>
     </div>
+    <div class="popup">
+        <header>
+          <h2>Share</h2>
+          <div class="close"><i class="uil uil-times"></i></div>
+        </header>
+        <div class="content">
+          <p>Share this link via</p>
+          <ul class="icons">
+            <a href="https://twitter.com/intent/tweet?text=Check out this webapp!&url=https://youtu.be/lg5WKsVnEA4" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://youtu.be/lg5WKsVnEA4" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send?text=https://youtu.be/lg5WKsVnEA4"><i class="fab fa-whatsapp"></i></a>
+           <a href="https://telegram.me/share/url?url=https://youtu.be/lg5WKsVnEA4" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          </ul>
+          <p>Or copy link</p>
+          <div class="field">
+            <i class="url-icon uil uil-link"></i>
+            <input type="text" readonly value="example.com/share-link">
+            <button>Copy</button>
+          </div>
+        </div>
+      </div>
+    <script>
+        const viewBtn = document.querySelector(".share"),
+        popup = document.querySelector(".popup"),
+        close = popup.querySelector(".close"),
+        field = popup.querySelector(".field"),
+        input = field.querySelector("input"),
+        copy = field.querySelector("button");
+        
+    
+        viewBtn.onclick = ()=>{
+          popup.classList.toggle("show");
+          const banner = document.querySelector('.banner');
+    banner.classList.add('blur');
+        }
+        close.onclick = ()=>{
+          viewBtn.click();
+          const banner = document.querySelector('.banner');
+    banner.classList.remove('blur');
+        }
+    
+        copy.onclick = ()=>{
+          input.select(); //select input value
+          if(document.execCommand("copy")){ //if the selected text copy
+            field.classList.add("active");
+            copy.innerText = "Copied";
+            setTimeout(()=>{
+              window.getSelection().removeAllRanges(); //remove selection from document
+              field.classList.remove("active");
+              copy.innerText = "Copy";
+            }, 3000);
+          }
+        }
+
+        
+      </script>
+      
 </body>
 
 </html>
