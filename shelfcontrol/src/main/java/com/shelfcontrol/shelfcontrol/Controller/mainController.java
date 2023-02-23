@@ -398,7 +398,7 @@ public class mainController {
         return ("booksynopsis");
     }
 
-    @GetMapping("/borrow")
+     @GetMapping("/borrow")
     public String borrowBook(HttpServletRequest request, Model model) throws NumberFormatException, SQLException {
 
         dbController controller = new dbController();
@@ -430,8 +430,7 @@ public class mainController {
         }
         return ("/");
     }
-
-    @GetMapping("/getReservation")
+  @GetMapping("/getReservation")
     public String getReservation(HttpServletRequest request, Model model){
         dbController controller = new dbController();
         HttpSession session = request.getSession();
