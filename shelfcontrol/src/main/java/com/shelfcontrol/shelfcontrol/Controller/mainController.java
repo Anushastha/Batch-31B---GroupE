@@ -194,8 +194,7 @@ public class mainController {
             return ("bookupload");
         }
     }
-
-    @GetMapping("/SearchBooks")
+   @GetMapping("/SearchBooks")
     public String searchBooks(HttpServletRequest request, ServletResponse response, Model model)
             throws SQLException, ServletException, IOException {
         dbController controller = new dbController();
@@ -237,10 +236,9 @@ public class mainController {
         }
         model.addAttribute("isbn", isbn);
         model.addAttribute("status", 2);
-        return ("bookUpdate");
+        return ("bookupdate");
     }
-
-    @GetMapping("/update")
+      @GetMapping("/update")
     public String update(HttpServletRequest request, Model model) throws SQLException {
         int isbn = Integer.parseInt(request.getParameter("isbn"));
         String bookName = request.getParameter("book");
@@ -259,7 +257,7 @@ public class mainController {
             model.addAttribute("status", 0);
         }
         model.addAttribute("isbn", isbn);
-        return ("bookUpdate");
+        return ("bookupdate");
     }
 
     @GetMapping("/delete")
@@ -268,12 +266,13 @@ public class mainController {
         dbController controller = new dbController();
         try {
             controller.deleteBook(isbn);
-            return ("bookUpdate");
+            return ("bookupdate");
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return ("bookSearch");
     }
+
 
     @GetMapping("/deleteAccount")
     public String deleteAcc(HttpServletRequest request) throws SQLException {
