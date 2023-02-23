@@ -34,7 +34,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           <div class="image-container">
             <div class="image">
               <img
-              src= <c:out value="/template/images/books/$isbn.png"/>
+              src= <c:out value="/template/images/books/${isbn}.png"/>
               value="/images/books/${res.isbn}.png"
                 alt="image"
                 width="200px"
