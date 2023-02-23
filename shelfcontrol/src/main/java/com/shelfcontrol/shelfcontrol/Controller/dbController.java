@@ -117,7 +117,7 @@ public class dbController {
         return accountType;
     }
 
-    public int addBooks(Books books) throws SQLException {
+      public int addBooks(Books books) throws SQLException {
         try {
             String query = "insert into Books(ISBN,BookName,AuthorName,Category,NoOfCopies,PublisherName,PublishedYear,Synopsis) values (?,?,?,?,?,?,?,?)";
             ps = database.connection.prepareStatement(query);
