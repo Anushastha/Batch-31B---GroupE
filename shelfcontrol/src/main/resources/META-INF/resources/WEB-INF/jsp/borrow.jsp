@@ -49,7 +49,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                         <div class="ind Due-Date">
                           <a id="due-date"><c:out value="${res.duedate}" /></a>
                         </div>
-                        <div class="ind Status"><a id="status"><c:out value="${res.status}" /></div>
+                        <div class="ind Status"><a id="status"><c:out value="${res.status}" /></a></div>
                         <div class="ind Action">
                           <button class="notify" id="notify-green">
                             Notify
