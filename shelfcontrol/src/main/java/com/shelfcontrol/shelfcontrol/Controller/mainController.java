@@ -104,7 +104,7 @@ public class mainController {
     }
 
 
-    @GetMapping("/registerUser")
+      @GetMapping("/registerUser")
     public String registerUser(HttpServletRequest request) throws SQLException {
         dbController controller = new dbController();
         String userName = request.getParameter("username");
@@ -124,7 +124,7 @@ public class mainController {
 
     }
 
-    @GetMapping("/auth")
+ @GetMapping("/auth")
     public String getLogin(HttpServletRequest request, Model model, ServletResponse response) throws SQLException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
