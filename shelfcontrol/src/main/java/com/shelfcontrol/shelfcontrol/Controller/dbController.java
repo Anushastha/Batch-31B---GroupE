@@ -169,7 +169,7 @@ public class dbController {
         return result;
     }
 
-    public int updateBooks(Books books) throws SQLException {
+   public int updateBooks(Books books) throws SQLException {
         try {
             String query = "update Books set BookName = ?, AuthorName = ?, Category = ?, NoOfCopies = ?, PublisherName = ?, PublishedYear = ?, Synopsis = ? where ISBN = ?";
             ps = database.connection.prepareStatement(query);
@@ -199,7 +199,6 @@ public class dbController {
         }
         return (resultSet);
     }
-
     public int deleteBook(Integer isbn) throws SQLException {
         String query = "delete from Books where ISBN = ?";
         ps = database.connection.prepareStatement(query);
